@@ -102,34 +102,10 @@
 	<body>
 		<!-- 헤더 연결 -->
 		<jsp:include page="header.jsp"></jsp:include>
-	
-			<div id="fullpage">
-				<div class="section " id="section0">
-					<div class="intro">
-						<h1>Fixed elements</h1>
-						<p>Create your own headers and footers</p>
-					</div>
-				</div>
-				<div class="section" id="section1">
-				    <h1>How to do it</h1>
-					<p>
-						You will need to place your header and footer outside the plugin's wrapper. 
-						This way it won't move on scrolling. Take a look at the source code of this page.
-					</p>
-				</div>
-				<div class="section" id="section2">
-					<div class="intro">
-						<h1>Enjoy it</h1>
-					</div>
-				</div>
-				<div class="section" id="section3">
-					<div class="intro">
-						<h1>Enjoy it</h1>
-					</div>
-				</div>
-			</div>
-	<!-- 푸터 연결 -->
-	<jsp:include page="footer.jsp"></jsp:include>
+		<!-- 메인 페이지 연결 -->
+		<jsp:include page="main.jsp"></jsp:include>
+		<!-- 푸터 연결 -->
+		<jsp:include page="footer.jsp"></jsp:include>
 
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
