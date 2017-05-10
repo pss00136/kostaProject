@@ -12,7 +12,8 @@
 	<!-- Themify Icons-->
 	<link rel="stylesheet" href="css/themify-icons.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+<!-- 	<link rel="stylesheet" href="css/bootstrap.css"> -->
+	<link href="/Rentoutua/main_content/cssSJ/bootstrap.min.css" rel="stylesheet">
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<!-- Owl Carousel  -->
@@ -22,15 +23,21 @@
 	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- *** Jquery *** -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	
-		<!-- header css -->
+	<!-- slide menu -->
+	<link rel="stylesheet" href="css/slide_menu.css">
+	<!-- header css -->
 	<link rel="stylesheet" href="css/header.style.css">
 
 
-
+	
 
 </head>
 <body>
@@ -82,9 +89,55 @@
 					</div>
 					
 				</div>
+				
+				 <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+    <span class="glyphicon glyphicon-book"></span>
+    </a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#top"  onclick="$('#menu-close').click();" >Reservation</a>
+            </li>
+            <li>
+                <a href="#top" onclick="$('#menu-close').click();" >Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick="$('#menu-close').click();" >About</a>
+            </li>
+            <li>
+                <a href="#services" onclick = "$('#menu-close').click();" >Services</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick="$('#menu-close').click();" >Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick="$('#menu-close').click();" >Contact</a>
+            </li>
+        </ul>
+    </nav>
 			</nav>
+			
+			
+			
 		</div>
-		
+
+<script>
+    
+ // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+</script>
+	
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->

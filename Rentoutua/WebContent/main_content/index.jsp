@@ -40,7 +40,7 @@
 	<!-- Flexslider -->
 	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+<!-- 	<link rel="stylesheet" href="css/style.css"> -->
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -60,22 +60,22 @@
 		<jsp:include page="footer.jsp"></jsp:include>
 
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+<!-- 	<script src="js/jquery.easing.1.3.js"></script> -->
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+<!-- 	<script src="js/bootstrap.min.js"></script> -->
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+<!-- 	<script src="js/jquery.waypoints.min.js"></script> -->
 	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
+<!-- 	<script src="js/owl.carousel.min.js"></script> -->
 	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
+<!-- 	<script src="js/jquery.countTo.js"></script> -->
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+<!-- 	<script src="js/jquery.flexslider-min.js"></script> -->
 	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+<!-- 	<script src="js/jquery.magnific-popup.min.js"></script> -->
+<!-- 	<script src="js/magnific-popup-options.js"></script> -->
 	<!-- Main -->
-	<script src="js/main.js"></script>
+<!-- 	<script src="js/main.js"></script> -->
 
 	</body>
 </html>
