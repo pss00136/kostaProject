@@ -6,25 +6,32 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
 <!-- Bootstrap -->
-<link href="main_content/cssSJ/bootstrap.min.css" rel="stylesheet">
-<!-- font awesome -->
-<link rel="stylesheet" href="main_content/cssSJ/font-awesome.min.css" media="screen"
-	title="no title" charset="utf-8">
-<!-- Custom style -->
-<link rel="stylesheet" href="main_content/cssSJ/style.css" media="screen"
-	title="no title" charset="utf-8">
-<style type="text/css">
+    <link href="/Rentoutua/main_content/cssSJ/bootstrap.min.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/Rentoutua/main_content/cssSJ/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="/Rentoutua/main_content/cssSJ/style.css" media="screen" title="no title" charset="utf-8">
 
+<style type="text/css">
+.form-group{
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
+	width: 65%;
+}
 </style>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins)  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- *** Jquery *** -->
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="main_content/js/bootstrap.min.js"></script>
+<!-- <script src="/Rentoutua/main_content/js/bootstrap.min.js"></script> -->
 </head>
 <body>
+<!-- 헤더 연결 -->
+<jsp:include page="header.jsp"></jsp:include>
 	<div class="form-group">
 	<div id="container" style="padding-top: 0px;">
 		<section class="sub_section">
@@ -43,8 +50,8 @@
 					<p class="img"></p>
 					<p></p>
 					<p style="text-align: center">
-						<img src="main_content/images/special.jpg"
-							alt="main_content/images/special.jpg" &nbsp;="">
+						<img src="/Rentoutua/main_content/images/special.jpg"
+							alt="/Rentoutua/main_content/images/special.jpg" &nbsp;="">
 					</p>
 					<p>&nbsp;</p>
 					<p></p>

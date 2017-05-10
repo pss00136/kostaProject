@@ -5,23 +5,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/navBar.css" rel="stylesheet">
-<link href="css/mypageReservation.css" rel="stylesheet">
+<link href="cssSJ/bootstrap.min.css" rel="stylesheet">
+<link href="cssSJ/navBar.css" rel="stylesheet">
+<link href="cssSJ/mypageReservation.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/mypageReservation.js"></script>
 <script type="text/javascript" src="js/navBar.js"></script>
+
+<style type="text/css">
+#container_panel_left{
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
+	width: 65%;
+}
+</style>
+
 </head>
 <body>
+<!-- 헤더 연결 -->
+<jsp:include page="header.jsp"></jsp:include>
 <!-- 
 User Profile Sidebar by @keenthemes
 A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
 Licensed under MIT
 -->
 
-<div class="container">
-<!--     <div class="row profile"> -->
+<div id="container_panel_left" class="container">
+    <div class="row profile">
 		<div class="col-md-3">
 			<div class="profile-sidebar">
 			<div class="profile-usertitle">
@@ -53,7 +65,7 @@ Licensed under MIT
 			</div>
 		</div>
 		
-<!-- 		<div class="col-md-9"> -->
+		<div class="col-md-9">
 			  <div class="row">
 <!-- 			<div -->
 <!-- 				class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad"> -->
@@ -84,7 +96,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 11일</span>
 													<h4 class="title">
 														스탠다드 룸 101호
@@ -101,7 +113,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 10일</span>
 													<h4 class="title">
 														스탠다드 룸 102호
@@ -118,7 +130,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 9일</span>
 													<h4 class="title">
 														스탠다드 룸 201호
@@ -128,14 +140,14 @@ Licensed under MIT
 											</div>
 										</td>
 									</tr>
-									<tr data-status="pagado" class="selected">
+									<tr data-status="pagado" >
 										<td>
 											<a href="javascript:;" class="star ">2
 											</a>
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 8일</span>
 													<h4 class="title">
 														디럭스 룸 202호
@@ -152,7 +164,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 8일</span>
 													<h4 class="title">
 														럭셔리 룸 404호
@@ -172,7 +184,7 @@ Licensed under MIT
 		
 			</div>
 <!-- 		</div> -->
-<!-- 		</div> -->
+		</div>
 	</div>
 <!-- Content End -->
 <br>

@@ -5,22 +5,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/navBar.css" rel="stylesheet">
-<link href="css/mypage.css" rel="stylesheet">
+<link href="cssSJ/bootstrap.min.css" rel="stylesheet">
+<link href="cssSJ/navBar.css" rel="stylesheet">
+<link href="cssSJ/mypageMember.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/mypage.js"></script>
+<script type="text/javascript" src="js/mypageMember.js"></script>
 <script type="text/javascript" src="js/navBar.js"></script>
+
+<style type="text/css">
+#container_panel_left{
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
+	width: 65%;
+}
+</style>
+
 </head>
 <body>
+
+<!-- 헤더 연결 -->
+<jsp:include page="header.jsp"></jsp:include>
 <!-- 
 User Profile Sidebar by @keenthemes
 A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
 Licensed under MIT
 -->
 <!-- navBar start -->
-<div class="container">
+<div id="container_panel_left" class="container">
     <div class="row profile">
 		<div class="col-md-3">
 			<div class="profile-sidebar">

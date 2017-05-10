@@ -62,9 +62,25 @@
       margin-left: 60px;
       
    }
+   #hotel_menu{
+   	left:45%;
+   }
    </style>
    
   <script>
+  $(document).ready(function(){
+	    $(".dropdown_hotel").hover(            
+	        function() {
+	            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
+	            $(this).toggleClass('open');        
+	        },
+	        function() {
+	            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
+	            $(this).toggleClass('open');       
+	        }
+	    );
+	});
+  
   $( function() {
     var dateFormat = "mm/dd/yy",
       from = $( "#from" )
@@ -138,7 +154,14 @@
                   </div>
                   <div class="col-xs-10 text-right menu-1 main-nav">
                      <ul>
-                        <li><a href="/Rentoutua/main_content/accStandard.jsp" class="external">Hotel Infomation</a></li>
+                        <li class="dropdown_hotel">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Hotel Infomation</a>
+	                         <ul id="hotel_menu" class="dropdown-menu" role="menu">
+				                <li><a href="/Rentoutua/main_content/accStandard.jsp" class="external" >Standard</a></li>
+				                <li><a href="/Rentoutua/main_content/accDeluxe.jsp" class="external">Deluxe</a></li>
+				                <li><a href="/Rentoutua/main_content/accSuite.jsp" class="external">Suite</a></li>
+				              </ul>      
+                        </li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                         <li><a href="#" class="external">Q&A</a></li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
@@ -148,9 +171,7 @@
                      </ul>
                   </div>
                </div>
-               
             </div>
-
              <!-- Navigation -->
              <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
              <span class="glyphicon glyphicon-book"></span>
