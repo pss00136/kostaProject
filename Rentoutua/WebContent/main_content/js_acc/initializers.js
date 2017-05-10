@@ -1,5 +1,6 @@
 // Run javascript after DOM is initialized
-$(document).ready(function() {
+(function ($) {
+	$(document).ready(function() {
 
 	$('.tabs_default').tabslet();
 
@@ -39,3 +40,5 @@ $(document).ready(function() {
 	});
 
 });
+})(jQuery);	
+	

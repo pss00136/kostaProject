@@ -6,6 +6,7 @@
 <title></title>
 	<!-- JQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="./js_acc/jquery-1.9.1.min.js"><\/script>')</script>
 		
 	<!-- JS -->
 		<script type="text/javascript" src="./js_acc/jquery.tabslet.min.js"></script>
@@ -13,7 +14,7 @@
 		<script type="text/javascript" src="./js_acc/jquery.anchor.js"></script>
 		<script src="./js_acc/initializers.js"></script>
 	<!-- JS ends -->
-
+	
 	<!-- Plugin -->
 		<script type="text/javascript" src='./js_acc/jquery-ui-1.10.0.custom.min.js'></script>
 
@@ -81,11 +82,12 @@
                 <li><a href="#tab-1">Single</a></li>
                 <li><a href="#tab-2">Twin</a></li>
                 <li><a href="#tab-3">Family twin</a></li>
-                <li><a href="#tab-3">Family triple</a></li>
+                <li><a href="#tab-4">Family triple</a></li>
               </ul>
               <div id='tab-1'><span>This is the default tab functionality.</span></div>
               <div id='tab-2'><span>Tab 2</span></div>
               <div id='tab-3'><span>Tab 3</span></div>
+              <div id='tab-4'><span>Tab 4</span4></div>
             </div>
           </article>
         </div>

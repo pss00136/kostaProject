@@ -11,10 +11,11 @@
 *****/
 
 
-
-$(document).ready(function() {
-	$("a.anchorLink").anchorAnimate()
-});
+(function ($) {
+	$(document).ready(function() {
+		$("a.anchorLink").anchorAnimate()
+	});
+})(jQuery);
 
 jQuery.fn.anchorAnimate = function(settings) {
 
