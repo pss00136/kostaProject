@@ -5,9 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/navBar.css" rel="stylesheet">
-<link href="css/mypageReservation.css" rel="stylesheet">
+<link href="cssSJ/bootstrap.min.css" rel="stylesheet">
+<link href="cssSJ/navBar.css" rel="stylesheet">
+<link href="cssSJ/mypageReservation.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/mypageReservation.js"></script>
