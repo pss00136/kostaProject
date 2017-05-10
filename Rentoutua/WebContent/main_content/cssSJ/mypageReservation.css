@@ -138,11 +138,7 @@ body {
 .table-filter .media .summary {
 	font-size: 14px;
 }
-.row{
-	width: 880px;
-	float: left;
-}
-.media-body{
+.media-con{
 		width: 745px;
 	}
 .panel-info{

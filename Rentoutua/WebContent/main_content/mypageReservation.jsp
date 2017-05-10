@@ -20,9 +20,6 @@
 	margin: 0 auto;
 	width: 65%;
 }
-.media .media-body{
-	width:800px;
-}
 </style>
 
 </head>
@@ -36,7 +33,7 @@ Licensed under MIT
 -->
 
 <div id="container_panel_left" class="container">
-<!--     <div class="row profile"> -->
+    <div class="row profile">
 		<div class="col-md-3">
 			<div class="profile-sidebar">
 			<div class="profile-usertitle">
@@ -68,7 +65,7 @@ Licensed under MIT
 			</div>
 		</div>
 		
-<!-- 		<div class="col-md-9"> -->
+		<div class="col-md-9">
 			  <div class="row">
 <!-- 			<div -->
 <!-- 				class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad"> -->
@@ -99,7 +96,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 11일</span>
 													<h4 class="title">
 														스탠다드 룸 101호
@@ -116,7 +113,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 10일</span>
 													<h4 class="title">
 														스탠다드 룸 102호
@@ -133,7 +130,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 9일</span>
 													<h4 class="title">
 														스탠다드 룸 201호
@@ -150,7 +147,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 8일</span>
 													<h4 class="title">
 														디럭스 룸 202호
@@ -167,7 +164,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 8일</span>
 													<h4 class="title">
 														럭셔리 룸 404호
@@ -187,7 +184,7 @@ Licensed under MIT
 		
 			</div>
 <!-- 		</div> -->
-<!-- 		</div> -->
+		</div>
 	</div>
 <!-- Content End -->
 <br>

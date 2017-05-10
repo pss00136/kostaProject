@@ -33,7 +33,7 @@ Licensed under MIT
 -->
 
 <div id="container_panel_left" class="container">
-<!--     <div class="row profile"> -->
+    <div class="row profile">
 		<div class="col-md-3">
 			<div class="profile-sidebar">
 			<div class="profile-usertitle">
@@ -64,7 +64,7 @@ Licensed under MIT
 			</div>
 		</div>
 		
-<!-- 		<div class="col-md-9"> -->
+		<div class="col-md-9">
 			  <div class="row">
 <!-- 			<div -->
 <!-- 				class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad"> -->
@@ -87,7 +87,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 11일</span>
 													<h4 class="title">
 														가격문의드립니다
@@ -104,7 +104,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 10일</span>
 													<h4 class="title">
 														호텔이 너무 좋네요
@@ -121,7 +121,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 9일</span>
 													<h4 class="title">
 														호텔 얼마인가요?
@@ -138,7 +138,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 8일</span>
 													<h4 class="title">
 														제발
@@ -155,7 +155,7 @@ Licensed under MIT
 										</td>
 										<td>
 											<div class="media">
-												<div class="media-body">
+												<div class="media-con">
 													<span class="media-meta pull-right">2017년 5월 8일</span>
 													<h4 class="title">
 														진짜...
@@ -174,8 +174,8 @@ Licensed under MIT
 		</section>
 		
 			</div>
-<!-- 		</div> -->
-<!-- 		</div> -->
+		</div>
+		</div>
 	</div>
 	<!-- Content End -->
 <br>
