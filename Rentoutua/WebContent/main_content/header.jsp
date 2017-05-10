@@ -79,7 +79,7 @@
 						</div>
 						<div class="col-xs-10 text-right menu-1 main-nav">
 							<ul>
-								<li><a href="/Rentoutua/main_content/accStandard.jsp">Hotel Infomation</a></li>
+								<li><a href="/Rentoutua/main_content/accStandard.jsp" class="external">Hotel Infomation</a></li>
 								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 								<li><a href="#" data-nav-section="portfolio">Q&A</a></li>
 								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
