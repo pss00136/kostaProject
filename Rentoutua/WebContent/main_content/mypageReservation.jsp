@@ -140,7 +140,7 @@ Licensed under MIT
 											</div>
 										</td>
 									</tr>
-									<tr data-status="pagado" class="selected">
+									<tr data-status="pagado" >
 										<td>
 											<a href="javascript:;" class="star ">2
 											</a>
