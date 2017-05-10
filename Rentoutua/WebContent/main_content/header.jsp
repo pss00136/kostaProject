@@ -140,9 +140,11 @@
 							<ul>
 								<li><a href="/Rentoutua/main_content/accStandard.jsp" class="external">Hotel Infomation</a></li>
 								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-								<li><a href="#" data-nav-section="portfolio">Q&A</a></li>
+								<li><a href="#" class="external">Q&A</a></li>
 								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-								<li><a href="#" data-nav-section="blog">Special Offer</a></li>
+								<li><a href="#" class="external">Special Offer</a></li>
+								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+								<li><a href="/Rentoutua/main_content/mypageMember.jsp" class="external">My page</a></li>
 							</ul>
 						</div>
 					</div>
