@@ -4,6 +4,34 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	
+		<!-- header css -->
+	<link rel="stylesheet" href="css/header.style.css">
+
+
+
+
 </head>
 <body>
 		<div id="header">
@@ -11,7 +39,7 @@
 				<div class="gtco-container">
 					<div class="row">
 						<div id="maintitle" class="col-sm-2 col-xs-12">
-							<div id="gtco-logo"><a href="index.html">Rentoutua <em>.</em></a></div>
+							<div id="gtco-logo"><a href="index.jsp">Rentoutua <em>.</em></a></div>
 						</div>
 						<div class="dropdown">
 							<button id="login_btn" class="btn btn-default"type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</button>
@@ -36,7 +64,7 @@
 												 </form>
 											</div>
 											<div class="bottom text-center">
-												New here ? <a href="#"><b>Join Us</b></a>
+												New here ? <a href="/Rentoutua/main_content/SignUp.jsp"><b>Join Us</b></a>
 											</div>
 									 </div>
 								</li>
@@ -44,12 +72,11 @@
 						</div>
 						<div class="col-xs-10 text-right menu-1 main-nav">
 							<ul>
-								<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-								<li><a href="#" data-nav-section="services">Services</a></li>
-								<li><a href="#" data-nav-section="portfolio">Portfolio</a></li>
-								<li><a href="#" data-nav-section="blog">Blog</a></li>
-								<li><a href="#" data-nav-section="contact">Contact</a></li>
-								<li><a href="http://gettemplates.co/" class="external">External</a></li>
+								<li><a href="#" data-nav-section="services">Hotel Infomation</a></li>
+								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+								<li><a href="#" data-nav-section="portfolio">Q&A</a></li>
+								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+								<li><a href="#" data-nav-section="blog">Special Offer</a></li>
 							</ul>
 						</div>
 					</div>
@@ -57,7 +84,24 @@
 				</div>
 			</nav>
 		</div>
-
+		
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
 
 </body>
 </html>

@@ -45,54 +45,6 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	
-	
-	
-	
-	<!-- ******새로 추가******* -->
-	
-	<!-- fullpage -->
-	<link rel="stylesheet" href="css/jquery.fullPage.css">
-	<link rel="stylesheet" href="css/fullpage.examples.css">
-	
-	<!-- bxslider -->
-	<link rel="stylesheet" href="css/jquery.bxslider.css">
-	
-	<!-- header css -->
-	<link rel="stylesheet" href="css/header.style.css">
-	
-	<!-- *** Jquery *** -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	
-	<!-- *** Jquery plugin ***  -->
-	<!-- fullpage -->
-	<script type="text/javascript" src="js/scrolloverflow.js"></script>
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="js/fullpage_examples.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
-
-			});
-		});
-	</script>
-	
-	<!-- bxslider -->
-	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-		  $('.slider1').bxSlider({
-		    slideWidth: 300,
-		    minSlides: 3,
-		    maxSlides: 3,
-		    slideMargin: 10
-		  });
-		});
-	</script>
-	<!-- ************************************************************ -->
-
-	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>

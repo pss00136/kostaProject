@@ -4,6 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- bxslider -->
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	
+	<!-- bxslider -->
+	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $('.slider1').bxSlider({
+		    slideWidth: 300,
+		    minSlides: 3,
+		    maxSlides: 3,
+		    slideMargin: 10
+		  });
+		});
+	</script>
 </head>
 <body>
 	<div id="footer">

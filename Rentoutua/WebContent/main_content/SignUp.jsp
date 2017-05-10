@@ -16,6 +16,9 @@
 
 </head>
 <body>
+<!-- 헤더 연결 -->
+<jsp:include page="header.jsp"></jsp:include>
+
  <article class="container">
   <div class="col-md-12">
         <div class="page-header">
