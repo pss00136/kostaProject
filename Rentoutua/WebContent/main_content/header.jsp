@@ -24,6 +24,9 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 	
+	<!-- cal - jquery ui -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
 	<!-- *** Jquery *** -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -35,10 +38,66 @@
 	<link rel="stylesheet" href="css/slide_menu.css">
 	<!-- header css -->
 	<link rel="stylesheet" href="css/header.style.css">
-
-
 	
-
+	<style type="text/css">
+	#cal_label1{
+		color: #fff;
+	}
+	#cal_label2{
+		color: #fff;
+	}
+	
+	#cal_li input{
+		margin-left: 15px;
+	}
+	
+	.rev_li label{
+		color: #fff;
+	}
+	.rev_li select{
+		width:40px;
+		height: 30px;
+	}
+	#rev_submit{
+		margin-left: 60px;
+		
+	}
+	</style>
+	
+  <script>
+  $( function() {
+    var dateFormat = "mm/dd/yy",
+      from = $( "#from" )
+        .datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 1
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#to" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        numberOfMonths: 1
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( dateFormat, element.value );
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+    }
+  } );
+  </script>
+	
 </head>
 <body>
 		<div id="header">
@@ -89,36 +148,47 @@
 					</div>
 					
 				</div>
-				
-				 <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
-    <span class="glyphicon glyphicon-book"></span>
-    </a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#top"  onclick="$('#menu-close').click();" >Reservation</a>
-            </li>
-            <li>
-                <a href="#top" onclick="$('#menu-close').click();" >Home</a>
-            </li>
-            <li>
-                <a href="#about" onclick="$('#menu-close').click();" >About</a>
-            </li>
-            <li>
-                <a href="#services" onclick = "$('#menu-close').click();" >Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick="$('#menu-close').click();" >Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick="$('#menu-close').click();" >Contact</a>
-            </li>
-        </ul>
-    </nav>
+
+			 	<!-- Navigation -->
+			    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+			    <span class="glyphicon glyphicon-book"></span>
+			    </a>
+			    <nav id="sidebar-wrapper">
+			    	<form name="frm">
+			        <ul class="sidebar-nav">
+			            <li class="sidebar-brand">
+			                <a href="#top"  onclick="$('#menu-close').click();" >Reservation</a>
+			            </li>
+			            <li id="cal_li">
+							<label id="cal_label1" for="from">Check-in</label><br/>
+							<input class="cal_form" type="text" id="from" name="from"><br/>
+							<label id="cal_label2" for="to">Check-out</label><br/>
+							<input class="cal_form" type="text" id="to" name="to"><br/><br/>
+			            </li>
+			            <li class="rev_li">
+			            	<label>Adult</label>&nbsp;&nbsp;&nbsp;
+							<select class="rev_people">
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select><br/>
+			            </li>
+			            <li class="rev_li">
+			                <label>Children</label>&nbsp;&nbsp;&nbsp;
+							<select>
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+							</select><br/><br/>
+			            </li>
+			            <li id="rev_submit">		     
+			                <input type="submit" value="예약하기" class="btn btn-success">
+			            </li>
+			        </ul>
+					</form>
+			    </nav>
 			</nav>
-			
-			
 			
 		</div>
 
