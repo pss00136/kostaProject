@@ -142,7 +142,7 @@
 								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 								<li><a href="#" class="external">Q&A</a></li>
 								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-								<li><a href="#" class="external">Special Offer</a></li>
+								<li><a href="/Rentoutua/main_content/special_list.jsp" class="external">Special Offer</a></li>
 								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 								<li><a href="/Rentoutua/main_content/mypageMember.jsp" class="external">My page</a></li>
 							</ul>
