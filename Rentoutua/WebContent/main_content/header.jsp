@@ -163,7 +163,7 @@
 				              </ul>      
                         </li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                        <li><a href="#" class="external">Q&A</a></li>
+                        <li><a href="/Rentoutua/main_content/QnAInput.jsp" class="external">Q&A</a></li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                         <li><a href="/Rentoutua/main_content/special_list.jsp" class="external">Special Offer</a></li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
