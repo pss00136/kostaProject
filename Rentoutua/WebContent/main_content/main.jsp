@@ -59,6 +59,8 @@
 					<div class="intro">
 						<h1>Fixed elements</h1>
 						<p>Create your own headers and footers</p>
+						<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+						
 					</div>
 				</div>
 				<div class="section" id="section1">
