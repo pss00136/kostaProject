@@ -154,10 +154,12 @@
                   </div>
                   <div class="col-xs-10 text-right menu-1 main-nav">
                      <ul>
+                     	<li><a href="/Rentoutua/main_content/branchInfo.jsp" class="external">Hotel Infomation</a></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                         <li class="dropdown_hotel">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Hotel Infomation</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Accommodation</a>
 	                         <ul id="hotel_menu" class="dropdown-menu" role="menu">
-				                <li><a href="/Rentoutua/main_content/accStandard.jsp" class="external" >Standard</a></li>
+				                <li><a href="/Rentoutua/main_content/accStandard.jsp" class="external">Standard</a></li>
 				                <li><a href="/Rentoutua/main_content/accDeluxe.jsp" class="external">Deluxe</a></li>
 				                <li><a href="/Rentoutua/main_content/accSuite.jsp" class="external">Suite</a></li>
 				              </ul>      
