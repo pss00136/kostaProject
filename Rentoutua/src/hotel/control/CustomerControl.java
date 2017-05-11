@@ -9,24 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import mvc.guest.command.Command;
-import mvc.guest.command.CommandDelete;
-import mvc.guest.command.CommandException;
-import mvc.guest.command.CommandInput;
-import mvc.guest.command.CommandList;
-import mvc.guest.command.CommandNull;
+import hotel.command.CusCommandInput;
+import hotel.command.Command;
+import hotel.command.CommandException;
 
 /**
  * Servlet implementation class GuestControl
  */
-public class HotelControl extends HttpServlet {
+public class CustomerControl extends HttpServlet {
 	
 	private HashMap commandMap;
-	private String	jspDir = "/05_mvc_class/2_mvcGuest/";
+	private String	jspDir = "main_content/";
 	private String  error = "error.jsp";
 	
 
-    public HotelControl() {
+    public CustomerControl() {
         super();       
 		initCommand();
 	}
@@ -34,13 +31,14 @@ public class HotelControl extends HttpServlet {
 	private void initCommand(){
 		commandMap = new HashMap();
 		//null?? db?ïàÍ∞îÎã§?ò¥
-		commandMap.put("main-page",	new CommandNull("main.jsp") );
-		commandMap.put("list-page",	new CommandList("listMessage.jsp") );
-		// ?ÇòÎ®∏Ï??èÑ Ï∂îÍ??ïòÍ∏?		
-		commandMap.put("input-form", new CommandNull("insertMessage.jsp") );
-		commandMap.put("insert-do", new CommandInput("saveMessage.jsp") );
-		commandMap.put("delete-form", new CommandNull("deleteMessage.jsp"));
-		commandMap.put("delete-do", new CommandDelete("deleteConfirm.jsp"));
+		//customer control
+//		commandMap.put("main-page",	new CommandNull("main.jsp") );
+//		commandMap.put("list-page",	new CommandList("listMessage.jsp") );
+//		// ?ÇòÎ®∏Ï??èÑ Ï∂îÍ??ïòÍ∏?		
+//		commandMap.put("input-form", new CommandNull("insertMessage.jsp") );
+		commandMap.put("cusinsert-do", new CusCommandInput("SignUpSave.jsp") );
+//		commandMap.put("delete-form", new CommandNull("deleteMessage.jsp"));
+//		commandMap.put("delete-do", new CommandDelete("deleteConfirm.jsp"));
 		
 	}
 
