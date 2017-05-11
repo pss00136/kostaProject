@@ -3,42 +3,16 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="CommentMapper">
-
-<resultMap type="comment" id="commentMap">
-	<id column="comment_no" 	property="commentNo"/>
-	<result column="user_id"	property="userId"/>
-	<result column="comment_content"	property="commentContent"/>
-	<result column="reg_date"	property="regDate"/>
-</resultMap>
+<mapper namespace="CustomerMapper">
 
 
-<insert id="insertComment" parameterType="comment">
-	INSERT INTO comment_tab
-	VALUES(#{commentNo}, #{userId}, #{commentContent}, sysdate)
+
+
+<insert id="insertCustomer" parameterType="customer">
+	INSERT INTO customer
+	VALUES(#{cuEmail}, #{cuPass}, #{cuBirthday}, #{cuPhone}, #{cuTel}, #{cuKname},#{cuLastname},#{cuFirstname},고객)
 </insert>
 <!-- # : PreparedStateMent형식, $ : Statement형식 -->
-
-<select id="selectComment" parameterType="hashmap"  resultMap="commentMap">
-	SELECT *
-	FROM comment_tab
-	<where>
-		<if test="commentNo != null ">
-			comment_no = #{commentNo}
-		</if>
-	</where>
-</select>
-
-<delete id="deleteComment" parameterType="hashmap">
-	DELETE FROM comment_tab
-	WHERE comment_no = #{commentNo}
-</delete>
-
-<update id="modifyComment" parameterType="comment">
-	UPDATE comment_tab SET   USER_ID = #{userId}, COMMENT_CONTENT = #{commentContent}, REG_DATE = sysdate
-	WHERE comment_no = #{commentNo}
-</update>
-
 
 
 </mapper>

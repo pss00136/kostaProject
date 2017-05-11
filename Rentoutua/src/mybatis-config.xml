@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 </settings>
 <!-- class name alias -->
  <typeAliases>
-	<typeAlias type="mybatis.guest.model.Comment" alias='comment'/>
+	<typeAlias type="hotel.model.Customer" alias='customer'/>
  </typeAliases>
  <environments default="development">
 	<environment id="development">
@@ -27,6 +27,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  </environments>
  <mappers>
 	<!-- 여러개의 매퍼를 등록 -->
-	<mapper resource="mybatis/guest/mapper/CommentMapper.xml"/>
+	<mapper resource="hotel/mapper/CustomaerMapper.xml"/>
  </mappers>
 </configuration>

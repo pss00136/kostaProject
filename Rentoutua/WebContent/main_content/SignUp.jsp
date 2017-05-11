@@ -24,34 +24,35 @@
         <div class="page-header">
     	    <h1>회원가입</h1>
         </div>
-        <form class="form-horizontal">
+        <form action="rentoutua.cus?cmd=cusinsert-do" class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="inputEmail">이메일</label>
+        <div class="col-sm-6">
+          <input class="form-control" id="inputEmail" name="cuEmail" type="email" placeholder="이메일">
+        </div>
+        </div>
         <div class="form-group">
             <label class="col-sm-3 control-label" for="inputkName">성명(한글)</label>
           <div class="col-sm-6">
-            <input class="form-control" id="inputkName" name="kName" type="text" placeholder="성명(한글)">
+            <input class="form-control" id="inputkName" name="cuKname" type="text" placeholder="성명(한글)">
           </div>
         </div>
          <div class="form-group">
         	<label class="col-sm-3 control-label" for="inputName">성명(영문)</label>
         	<label class="col-sm-1 control-label"  for="inputName">FirstName</label> 
           <div class="col-sm-2">
-            <input class="form-control " id="inputFirstName" name="FirstName" type="text" placeholder="First name(이름)">
+            <input class="form-control " id="inputFirstName" name="cuFirstName" type="text" placeholder="First name(이름)">
           </div>
            <label class="col-sm-1 control-label" for="inputName">LastName</label>
           <div class="col-sm-2">
-            <input class="form-control " id="inputLastName" type="text" placeholder="Last name(성)">
+            <input class="form-control " id="inputLastName" name="cuLastname" type="text" placeholder="Last name(성)">
           </div>
         </div>
-        <div class="form-group">
-          <label class="col-sm-3 control-label" for="inputEmail">이메일</label>
-        <div class="col-sm-6">
-          <input class="form-control" id="inputEmail" type="email" placeholder="이메일">
-        </div>
-        </div>
+        
         <div class="form-group">
           <label class="col-sm-3 control-label" for="inputPassword">비밀번호</label>
         <div class="col-sm-6">
-          <input class="form-control" id="inputPassword" type="password" placeholder="비밀번호">
+          <input class="form-control" id="inputPassword" name="cuPass" type="password" placeholder="비밀번호">
         <p class="help-block">숫자, 특수문자 포함 8자 이상</p>
         </div>
         </div>
@@ -67,19 +68,19 @@
         <div class="form-group">
             <label class="col-sm-3 control-label" for="inputBirth">생년월일</label>
           <div class="col-sm-6">
-            <input class="form-control" id="inputBirth" type="text" placeholder="생년월일">
+            <input class="form-control" id="inputBirth" name="cuBirthday" type="text" placeholder="생년월일">
           </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label" for="inputNumber">휴대폰번호</label>
               <div class="col-sm-6">
-                  <input type="tel" class="form-control" id="inputPhone" placeholder="- 없이 입력해 주세요" />
+                  <input type="tel" class="form-control" name="cuPhone" id="inputPhone" placeholder="- 없이 입력해 주세요" />
               </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label" for="inputNumber">전화번호</label>
               <div class="col-sm-6">
-                  <input type="tel" class="form-control" id="inputTel" placeholder="- 없이 입력해 주세요" />
+                  <input type="tel" class="form-control" name="cuTel" id="inputTel" placeholder="- 없이 입력해 주세요" />
               </div>
         </div>
           <div class="form-group">
