@@ -24,7 +24,7 @@
         <div class="page-header">
     	    <h1>회원가입</h1>
         </div>
-        <form action="rentoutua.cus?cmd=cusinsert-do" class="form-horizontal">
+        <form method="post" action="rentoutua.cus?cmd=cusinsert-do" class="form-horizontal">
         <div class="form-group">
           <label class="col-sm-3 control-label" for="inputEmail">이메일</label>
         <div class="col-sm-6">
@@ -41,7 +41,7 @@
         	<label class="col-sm-3 control-label" for="inputName">성명(영문)</label>
         	<label class="col-sm-1 control-label"  for="inputName">FirstName</label> 
           <div class="col-sm-2">
-            <input class="form-control " id="inputFirstName" name="cuFirstName" type="text" placeholder="First name(이름)">
+            <input class="form-control " id="inputFirstName" name="cuFirstname" type="text" placeholder="First name(이름)">
           </div>
            <label class="col-sm-1 control-label" for="inputName">LastName</label>
           <div class="col-sm-2">

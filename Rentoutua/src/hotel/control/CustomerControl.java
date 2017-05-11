@@ -19,7 +19,7 @@ import hotel.command.CommandException;
 public class CustomerControl extends HttpServlet {
 	
 	private HashMap commandMap;
-	private String	jspDir = "main_content/";
+	private String	jspDir = "/main_content/";
 	private String  error = "error.jsp";
 	
 
@@ -29,6 +29,7 @@ public class CustomerControl extends HttpServlet {
 	}
 
 	private void initCommand(){
+		System.out.println("ÄÁÆ®·Ñ Á¢¼Ó");
 		commandMap = new HashMap();
 		//null?? db?•ˆê°”ë‹¤?˜´
 		//customer control
@@ -36,7 +37,7 @@ public class CustomerControl extends HttpServlet {
 //		commandMap.put("list-page",	new CommandList("listMessage.jsp") );
 //		// ?‚˜ë¨¸ì??„ ì¶”ê??•˜ê¸?		
 //		commandMap.put("input-form", new CommandNull("insertMessage.jsp") );
-		commandMap.put("cusinsert-do", new CusCommandInput("SignUpSave.jsp") );
+		commandMap.put("cusinsert-do", new CusCommandInput("SignUpSave.jsp"));
 //		commandMap.put("delete-form", new CommandNull("deleteMessage.jsp"));
 //		commandMap.put("delete-do", new CommandDelete("deleteConfirm.jsp"));
 		
@@ -70,9 +71,9 @@ public class CustomerControl extends HttpServlet {
 			}else{
 				throw new CommandException("ì§?? •?•  ëª…ë ¹?–´ê°? ì¡´ì¬?•˜ì§? ?•Š?Œ");
 			}
-			//System.out.println(cmd);
+//			System.out.println(cmd);
 			nextPage = cmd.execute( request );
-			//System.out.println(nextPage);
+//			System.out.println(nextPage);
 
 		}catch( CommandException e ){
 			request.setAttribute("javax.servlet.jsp.jspException", e );

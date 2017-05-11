@@ -18,7 +18,7 @@ public class CusCommandInput implements Command{
 	
 	@Override
 	public String execute(HttpServletRequest request) throws CommandException {
-
+			System.out.println("커맨드 접속");
 			Customer cus = new Customer();
 			cus.setCuEmail(request.getParameter("cuEmail"));
 			cus.setCuPass(request.getParameter("cuPass"));
@@ -28,7 +28,7 @@ public class CusCommandInput implements Command{
 			cus.setCuKname(request.getParameter("cuKname"));
 			cus.setCuFirstname(request.getParameter("cuFirstname"));
 			cus.setCuLastname(request.getParameter("cuLastname"));
-			
+			System.out.println(cus.getCuEmail());
 			
 			
 			int result = repo.insertCustomer(cus);

@@ -27,6 +27,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  </environments>
  <mappers>
 	<!-- 여러개의 매퍼를 등록 -->
-	<mapper resource="hotel/mapper/CustomaerMapper.xml"/>
+	<mapper resource="hotel/mapper/CustomerMapper.xml"/>
  </mappers>
 </configuration>

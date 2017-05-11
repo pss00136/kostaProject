@@ -3,14 +3,14 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="CustomerMapper">
+<mapper namespace="hotel.mapper.CustomerMapper">
 
 
 
 
 <insert id="insertCustomer" parameterType="customer">
-	INSERT INTO customer
-	VALUES(#{cuEmail}, #{cuPass}, #{cuBirthday}, #{cuPhone}, #{cuTel}, #{cuKname},#{cuLastname},#{cuFirstname},고객)
+	INSERT INTO customer(cu_email,cu_pass,cu_birthday,cu_phone,cu_tel,cu_kname,cu_lastname,cu_firstname,cu_type)
+	VALUES(#{cuEmail},#{cuPass},#{cuBirthday},#{cuPhone},#{cuTel},#{cuKname},#{cuLastname},#{cuFirstname},'고객')
 </insert>
 <!-- # : PreparedStateMent형식, $ : Statement형식 -->
 

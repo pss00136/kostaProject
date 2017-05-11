@@ -10,11 +10,10 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import hotel.model.Customer;
-import mybatis.guest.model.Comment;
 
 public class CustomerRepository {
 	
-	String namespace="CustomerMapper";
+	String namespace="hotel.mapper.CustomerMapper";
 	
 	private SqlSessionFactory getSelSessionFactiory(){
 		String resource = "mybatis-config.xml";
@@ -56,7 +55,7 @@ public class CustomerRepository {
 //			int result = sqlSess.update(statment, c);
 //			if(result > 0){
 //				sqlSess.commit();
-//				//JDBC : auto-commit, Mybatis : ?•„?‹˜
+//				//JDBC : auto-commit, Mybatis : ?ï¿½ï¿½?ï¿½ï¿½
 //			}else{
 //				sqlSess.rollback();
 //			}
@@ -74,7 +73,7 @@ public class CustomerRepository {
 //			int result = sqlSess.delete(namespace+".deleteComment" , map);
 //			if(result > 0){
 //				sqlSess.commit();
-//				//JDBC : auto-commit, Mybatis : ?•„?‹˜
+//				//JDBC : auto-commit, Mybatis : ?ï¿½ï¿½?ï¿½ï¿½
 //			}else{
 //				sqlSess.rollback();
 //			}
@@ -89,11 +88,13 @@ public class CustomerRepository {
 		//JDBC : Connection, Mybatis : SqlSession
 		SqlSession sqlSess = getSelSessionFactiory().openSession();
 		try{
+			System.out.println(cus.getCuEmail());
 			String statment = namespace + ".insertCustomer";
 			int result = sqlSess.insert(statment, cus);
 			if(result > 0){
+				System.out.println("DBÄ¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 				sqlSess.commit();
-				//JDBC : auto-commit, Mybatis : ?•„?‹˜
+				//JDBC : auto-commit, Mybatis : ?ï¿½ï¿½?ï¿½ï¿½
 			}else{
 				sqlSess.rollback();
 			}
