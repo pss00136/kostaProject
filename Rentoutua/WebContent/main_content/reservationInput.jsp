@@ -18,6 +18,9 @@
 		#reservation_info{
 			background-color: #f0f0f0;
 		}
+		#div_reservation_btn{
+			text-align: center;
+		}
 	
 	</style>
 </head>
@@ -26,7 +29,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 
 <div class="container" id="reservation_main">
-			            <!-- 예약 객실 및 날짜 정보 -->
+			<!-- 예약 객실 및 날짜 정보 -->
             <div class="row">
             	<div class="col-md-12">
                     <div class="well-block" id="reservation_info">
@@ -35,7 +38,7 @@
                         </div>
                         <div class="feature-block">
                             <div class="feature feature-blurb-text">
-                                <h4 class="feature-title">24/7 Hours Available</h4>
+                                <h4 class="feature-title">지점: 레또뚜아 ㅇㅇ지점</h4>
                                 <div class="feature-content">
                                     <p>Integer nec nisi sed mi hendrerit mattis. Vestibulum mi nunc, ultricies quis vehicula et, iaculis in magnestibulum.</p>
                                 </div>
@@ -174,35 +177,41 @@
                                 </div>
 								<div class="col-md-4">
                                     <div class="form-group">
-                                        <label class="control-label" for="email">&nbsp;</label>                                    
-                                        <select id="card" name="card" class="form-control">
-                                            <option value="2017">2017</option>
-                                            <option value="2018">2018</option>
-                                            <option value="2019">2019</option>
-                                            <option value="2020">2020</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-											<option value="2027">2027</option>
-                                        </select>                                      
+                                        <label class="control-label" for="email">보안 코드</label>                                    
+                                        <input id="name" name="" type="text" class="form-control input-md">                  
                                     </div>
-                                </div>                                
-                                <!-- Button -->
-                                <div class="col-md-12">
+                                </div>
+                                <div class="col-md-8">
                                     <div class="form-group">
-                                        <button id="singlebutton" name="singlebutton" class="btn btn-default">Make An Appointment</button>
+                                    	<label class="control-label">&nbsp;</label> 
+                                        <p>카드 앞면에 적힌 첫번째 네자리 숫자</p>              
                                     </div>
-                                </div>                               
-                                
+                                </div>                                       
                             </div>
                         </form>
                         <!-- form end -->
                     </div>
-                </div>
-            </div>     
+                </div>          
+            </div>
+            <br/>
+			<!-- 예약 확정 버튼 -->
+            <div class="row">
+            	<div class="col-md-12">
+                    <div class="block">
+                        <div class="feature-block">
+							<div class="feature feature-blurb-text">
+                                <!-- Button -->
+                                <div class="col-md-12">
+                                    <div id="div_reservation_btn" class="form-group">
+                                        <button id="reservation_confirm_btn" name="reservation_confirm_btn" class="btn btn-success btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;예약 확정&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                    </div>
+                                </div>   <br/><br/>							
+							
+							</div>
+                        </div>
+                    </div>
+                </div> 
+            </div>                 
                 
 </div>
     <!-- 푸터 연결 -->

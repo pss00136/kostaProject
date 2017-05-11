@@ -179,7 +179,7 @@
              <span class="glyphicon glyphicon-book"></span>
              </a>
              <nav id="sidebar-wrapper">
-                <form name="frm" action="">
+                <form name="frm" action="reservationSelect.jsp">
                  <ul class="sidebar-nav">
                      <li class="sidebar-brand">
                          <a href="#top"  onclick="$('#menu-close').click();" >Reservation</a>
