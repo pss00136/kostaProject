@@ -131,5 +131,8 @@ body {padding-top:20px;}
 	</div>
 	</div>
 </div>
+
+		<!-- ÇªÅÍ ¿¬°á -->
+		<jsp:include page="footer2.jsp"></jsp:include>
 </body>
 </html>

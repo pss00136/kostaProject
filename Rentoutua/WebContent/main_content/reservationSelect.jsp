@@ -154,7 +154,6 @@
 					<p>
 						<br/>
 						<button id="btn_reservation" type="submit" class="btn btn-success btn-lg">예약하기</button>
-						<br/><br/><br/><br/><br/>
 					</p>
 				</td>
 			</tr>		
@@ -162,5 +161,8 @@
 	</div>
 
 </div>
+
+    <!-- 푸터 연결 -->
+	<jsp:include page="footer2.jsp"></jsp:include>
 </body>
 </html>
