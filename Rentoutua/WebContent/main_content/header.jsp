@@ -121,7 +121,7 @@
             <div class="gtco-container">
                <div class="row">
                   <div id="maintitle" class="col-sm-2 col-xs-12">
-                     <div id="gtco-logo"><a href="index.jsp">Rentoutua <em>.</em></a></div>
+                     <div id="gtco-logo"><a href="index.jsp">Rentoutua</a></div>
                   </div>
                   <div class="dropdown">
                      <button id="login_btn" class="btn btn-default"type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</button>

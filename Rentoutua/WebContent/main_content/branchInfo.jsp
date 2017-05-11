@@ -7,11 +7,6 @@
    <!-- Bootstrap  -->
    <link rel="stylesheet" href="css/bootstrap.css">
    
-   <!-- *** Jquery *** -->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<!--    <!-- Bootstrap  --> 
-<!--    <script src="js/bootstrap.min.js"></script> -->
-   
    <style type="text/css">
       #rev_sel_content{
             position : relative;
@@ -57,6 +52,7 @@
 <body>
    <!-- 헤더 연결 -->
    <jsp:include page="header.jsp"></jsp:include>
+   
 <div id="rev_sel_content">
    <h1>Hotel Information</h1>
    <hr/>
