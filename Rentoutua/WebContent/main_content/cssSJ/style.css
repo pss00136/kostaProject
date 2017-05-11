@@ -28,55 +28,55 @@ By: dave-cheon
 	opacity: 1;
 }
 
-#inputFirstName {
-	margin-left: 0px;
-}
+/* #inputFirstName { */
+/* 	margin-left: 0px; */
+/* } */
 
-#inputLastName {
-	margin-left: 0px;
-}
+/* #inputLastName { */
+/* 	margin-left: 0px; */
+/* } */
 
-.sub_content h3 {
-	padding-top: 15px;
-	background: url(../img/accommodation/tit_line.png) 0 0 no-repeat;
-	font-size: 38px;
-	color: #000;
-	margin: 0 auto;
-	width: 1200px;
-	font-family: 'Noto Sans';
-}
+/* .sub_content h3 { */
+/* 	padding-top: 15px; */
+/* 	background: url(../img/accommodation/tit_line.png) 0 0 no-repeat; */
+/* 	font-size: 38px; */
+/* 	color: #000; */
+/* 	margin: 0 auto; */
+/* 	width: 1200px; */
+/* 	font-family: 'Noto Sans'; */
+/* } */
 
-reset.css: 68
-h1, h2, h3, h4, h5, h6, th {
-	font-weight: normal;
-	font-family: 'Noto Sans Bold';
-}
+/* reset.css: 68 */
+/* h1, h2, h3, h4, h5, h6, th { */
+/* 	font-weight: normal; */
+/* 	font-family: 'Noto Sans Bold'; */
+/* } */
 
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-user agent stylesheet
-h3 {
-	display: block;
-	font-size: 1.17em;
-	-webkit-margin-before: 1em;
-	-webkit-margin-after: 1em;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;
-	font-weight: bold;
-}
+/* user agent stylesheet */
+/* h3 { */
+/* 	display: block; */
+/* 	font-size: 1.17em; */
+/* 	-webkit-margin-before: 1em; */
+/* 	-webkit-margin-after: 1em; */
+/* 	-webkit-margin-start: 0px; */
+/* 	-webkit-margin-end: 0px; */
+/* 	font-weight: bold; */
+/* } */
 
 .sub_content p.sub_txt {
 	margin: 0 auto 30px;
@@ -145,181 +145,177 @@ h3 {
 	border-bottom: 1px solid #000;
 }
 
-element.style {
+/* element.style { */
 	
-}
+/* } */
 
-content.css: 920
-.so_view_tit {
-	padding-bottom: 25px;
-	border-bottom: 1px solid #000;
-}
+/* content.css: 920 */
+/* .so_view_tit { */
+/* 	padding-bottom: 25px; */
+/* 	border-bottom: 1px solid #000; */
+/* } */
 
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-user agent stylesheet
-div {
-	display: block;
-}
+/* user agent stylesheet */
+/* div { */
+/* 	display: block; */
+/* } */
 
-Inherited from div.so_view_wr
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* Inherited from div.so_view_wr */
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-Inherited from div.sub_content
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* Inherited from div.sub_content */
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-Inherited from section.sub_section
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* Inherited from section.sub_section */
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-Inherited from div#container
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* Inherited from div#container */
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-Inherited from div#wrap
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* Inherited from div#wrap */
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-Inherited from body
-reset.css: 14
-body {
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 1em;
-	line-height: 1;
-	min-width: 320px;
-	overflow-x: hidden;
-}
+/* Inherited from body */
+/* reset.css: 14 */
+/* body { */
+/* 	font-family: 'Noto Sans', sans-serif; */
+/* 	font-size: 1em; */
+/* 	line-height: 1; */
+/* 	min-width: 320px; */
+/* 	overflow-x: hidden; */
+/* } */
 
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-Inherited from html
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* Inherited from html */
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-.so_view_wr {
-	margin: 0 auto;
-	width: 1200px;
-}
 
-reset.css: 5
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
-	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-	th, td, article, aside, canvas, details, figcaption, figure, footer,
-	header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/* reset.css: 5 */
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, */
+/* 	blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, */
+/* 	q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, */
+/* 	fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, */
+/* 	th, td, article, aside, canvas, details, figcaption, figure, footer, */
+/* 	header, hgroup, menu, nav, section, summary, time, mark, audio, video { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border: 0; */
+/* 	font-size: 100%; */
+/* 	vertical-align: baseline; */
+/* 	background: transparent; */
+/* } */
 
-user agent stylesheet
-div {
-	display: block;
-}
+/* user agent stylesheet */
+/* div { */
+/* 	display: block; */
+/* } */
 
 .sub_section {
 	/* background: #dedede; */

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/Rentoutua/main_content/cssSJ/style.css" media="screen" title="no title" charset="utf-8">
 
 <style type="text/css">
-.form-group{
+.form-groups{
 	position: relative;
 	top: 100px;
 	margin: 0 auto;
@@ -32,7 +32,7 @@
 <body>
 <!-- 헤더 연결 -->
 <jsp:include page="header.jsp"></jsp:include>
-	<div class="form-group">
+	<div class="form-groups">
 	<div id="container" style="padding-top: 0px;">
 		<section class="sub_section">
 		<div class="sub_content">
