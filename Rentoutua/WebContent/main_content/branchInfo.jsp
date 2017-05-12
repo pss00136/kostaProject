@@ -47,6 +47,13 @@
       .branch_img{
       	width : 100%;
       }
+      
+      table tr{
+      	border-right:none;
+		border-left:none;
+		border-top:none;
+		border-bottom:none;
+      }
    </style>
 </head>
 <body>
@@ -94,6 +101,9 @@
                   	054-745-7788<br/>
                   </h3>   
                </td>
+            </tr>
+            <tr>
+            <td colspan="2">&nbsp;</td>
             </tr>
             <tr>
                <td class="branch_title">

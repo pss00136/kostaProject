@@ -4,31 +4,60 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title></title>
-	<!-- JQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
-	<!-- bxSlider Javascript file -->
-	<script src="/Rentoutua/main_content/js/jquery.bxslider.min.js"></script>
-	
-	<!-- bxSlider CSS file -->
-	<link href="/Rentoutua/main_content/css/jquery.bxslider.css" rel="stylesheet" />
+
+<!-- css -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="http://bxslider.com/lib/jquery.bxslider.css" type="text/css" />     
+
+<!-- 	JQuery - -->
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script src="http://bxslider.com/lib/jquery.bxslider.js"></script>
 		
-	<!-- User-->
+<!-- User-->
 <script type="text/javascript">
 
 (function($){
 	$(document).ready(function(){
-		$('ul.tabs li').click(function(){
-			var tab_id = $(this).attr('data-tab');
-
-			$('ul.tabs li').removeClass('current');
-			$('.tab-content').removeClass('current');
-
-			$(this).addClass('current');
-			$("#"+tab_id).addClass('current');
-		});
-		
-		$('.bxslider').bxSlider();
+	    var slider2_initialized = false;
+	    var slider3_initialized = false;
+	    var slider4_initialized = false;
+	    
+	    $( "#tabs" ).tabs({
+	        activate: function( event, ui ) {
+	           //console.log("ui = ");console.log(ui);
+	           var tab_id = $(ui.newPanel).attr('id');//alert(tab_id);
+	           
+	           if(tab_id == "tabs-2" && slider2_initialized == false)
+	           {    
+	               $('.bxslider2').bxSlider({
+	                 mode: 'fade'
+	               }); 
+	               //update initialization flag to true
+	               slider2_initialized = true;
+	           }
+	           else if(tab_id == "tabs-3" && slider3_initialized == false)
+	           {    
+	               $('.bxslider3').bxSlider({
+	                 mode: 'fade'
+	               }); 
+	               //update initialization flag to true
+	               slider3_initialized = true;
+	           }
+	           else if(tab_id == "tabs-4" && slider4_initialized == false)
+	           {    
+	               $('.bxslider4').bxSlider({
+	                 mode: 'fade'
+	               }); 
+	               //update initialization flag to true
+	               slider4_initialized = true;
+	           }
+	        }
+	    });
+	    
+		$('.bxslider1').bxSlider({
+			 mode: 'fade'
+		});   
 	});
 })(jQuery);
 	
@@ -43,43 +72,61 @@
             margin:0 auto;
     }
 	
-	body{
-			margin-top: 100px;
-			font-family: 'Trebuchet MS', serif;
-			line-height: 1.6
-		}
-	.container{
-		width: 800px;
-		margin: 0 auto;
+	#tabs li {
+	  left:0;
+	  right:0;
 	}
-
-	ul.tabs{
-		margin: 0px;
-		padding: 0px;
-		list-style: none;
+	
+	table {
+    width: 50%;
 	}
-	ul.tabs li{
-		background: none;
-		color: #222;
-		display: inline-block;
-		padding: 10px 15px;
-		cursor: pointer;
+	
+	thead, tbody, tr, td, th {
+	    display: block;
 	}
-
-	ul.tabs li.current{
-		background: #ededed;
-		color: #222;
+	
+	thead th {
+	    height: 30px;
 	}
-
-	.tab-content{
-		display: none;
-		background: #ededed;
-		padding: 15px;
+	
+	tbody {
+/* 		overflow-y: auto; */
+	    height: 150px;
 	}
-
-	.tab-content.current{
-		display: inherit;
+	
+	tbody td, thead th {
+	    float: left;
+	    width: 33%;
 	}
+	
+	tr:after {
+	    clear: both;
+	    content: ' ';
+	    display: block;
+	    visibility: hidden;
+	}
+	
+	.info_list {
+		list-style-type : square;
+	}
+	
+	.info_list li {
+		list-style-type : square;
+		font-size : 12px;
+		line-height: 200%;
+		
+	}
+	
+	.title {
+		font-size : 20px;
+		font-weight : bold;
+	}
+	
+	.title2 {
+		font-size : 15px;
+		font-weight : bold;
+	}
+	
 </style>
 </head>
 <body>
@@ -90,33 +137,432 @@
   		<h1>Standard</h1>
    			<hr/>
             <p class="sub_txt">바쁜 비즈니스맨의 피로를 풀 수 있는 편안하고 합리적인 공간으로 비즈니스를 위한 최적의 휴식을 제공합니다.</p>
-		    
-		    <div class="container">
-				<ul class="tabs">
-					<li class="tab-link current" data-tab="tab-1">d</li>
-					<li class="tab-link" data-tab="tab-2">Tab Two</li>
-					<li class="tab-link" data-tab="tab-3">Tab Three</li>
-					<li class="tab-link" data-tab="tab-4">Tab Four</li>
+		    <div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Single</a></li>
+					<li><a href="#tabs-2">Twin</a></li>
+					<li><a href="#tabs-3">Family Twin</a></li>
+					<li><a href="#tabs-4">Family Triple</a></li>
 				</ul>
-			
-				<div id="tab-1" class="tab-content current">
-					<ul class="bxslider">
-					  <li><img src="http://placehold.it/350x150" /></li>
+				<div id="tabs-1" class="tab-content current">
+					<ul class="bxslider1">
+					  <li><img src="/Rentoutua/main_content/images/rooms/standard_single_img01.jpg" /></li>
 					  <li><img src="/Rentoutua/main_content/images/rooms/standard_single_img02.jpg" /></li>
 					  <li><img src="/Rentoutua/main_content/images/rooms/standard_single_img03.jpg" /></li>
 					</ul>
+					
+					<table class="table table-fixed">
+			        <tbody>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon01.png" ></td>
+			                <td>
+								<p class="title">특징</p>
+								<ul class="info_list">
+									<li>
+										<span>가 격 :</span>
+										 200, 000원
+									</li>
+									<li>
+										<span>면 적 :</span>
+										 24.52㎡
+									</li>
+									<li>
+										<span>위 치 :</span>
+										 2 층
+									</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+								<ul class="info_list">
+									<li>
+										<span>객실수 :</span>
+										 10실
+									</li>
+									<li>
+										<span>타 입 :</span>
+										 싱글
+									</li>
+								</ul>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon02.png" ></td>
+			                <td>
+								<p class="title">서비스</p>
+								<ul class="info_list">
+									<li>초고속 인터넷 및 WIFI(무료)</li>
+									<li>무료생수(1일 2병) 및 차(티백) 제공</li>
+									<li>Direct 국제전화, 보이스 메일 및 모닝콜</li>
+									<li>비즈니스 센터 무료 이용</li>
+									<li>일일 세탁(유료)</li>
+									<li>미니바(일부 객실 제외)</li>
+									<li>룸서비스(06:30~24:00)</li>
+								</ul>
+							</td>
+			                <td>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon03.png" ></td>
+			                <td>
+								<p class="title">편의시설</p>
+								<span class="title2">객 실</span>
+								<ul class="info_list">
+									<li>32” LCD TV(62개 채널)</li>
+									<li>개인금고</li>
+									<li>전기포트, 찻잔세트</li>
+									<li>손전등, 방연마스크</li>
+									<li>옷솔, 구두솔, 구둣주걱</li>
+									<li>110/220V 전압사용가능</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+			                	<span class="title2">욕 실</span>
+								<ul class="info_list">
+									<li>비데 및 욕조(일부 객실 제외)</li>
+									<li>욕실용품(AVEDA 4종, 칫솔·치약은 유료)</li>
+									<li>타월 3종 (핸드·세면·베스)</li>
+									<li>헤어드라이기</li>
+									<li>목욕가운, 슬리퍼</li>
+									<li>다리미와 다리미판(요청 시)</li>
+								</ul>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon04.png" ></td>
+			                <td>
+								<p class="title">이용안내</p>
+								<ul class="info_list">
+									<li>체크인 : 14:00</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+								<ul class="info_list">
+									<li>체크아웃 : 12:00</li>
+								</ul>
+			                </td>
+			            </tr>
+			    	</tbody>
+			   	</table>
 				</div>
-				<div id="tab-2" class="tab-content">
-					 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				<div id="tabs-2" class="tab-content">
+					<ul class="bxslider2">
+					  <li><img src="/Rentoutua/main_content/images/rooms/standard_twin_img01.jpg" /></li>
+					  <li><img src="/Rentoutua/main_content/images/rooms/standard_twin_img02.jpg" /></li>
+					  <li><img src="/Rentoutua/main_content/images/rooms/standard_twin_img03.jpg" /></li>
+					</ul>
+					<table class="table table-fixed">
+			        <tbody>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon01.png" ></td>
+			                <td>
+								<p class="title">특징</p>
+								<ul class="info_list">
+									<li>
+										<span>가 격 :</span>
+										 200, 000원
+									</li>
+									<li>
+										<span>면 적 :</span>
+										 24.52㎡
+									</li>
+									<li>
+										<span>위 치 :</span>
+										 2 층
+									</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+								<ul class="info_list">
+									<li>
+										<span>객실수 :</span>
+										 10실
+									</li>
+									<li>
+										<span>타 입 :</span>
+										 싱글
+									</li>
+								</ul>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon02.png" ></td>
+			                <td>
+								<p class="title">서비스</p>
+								<ul class="info_list">
+									<li>초고속 인터넷 및 WIFI(무료)</li>
+									<li>무료생수(1일 2병) 및 차(티백) 제공</li>
+									<li>Direct 국제전화, 보이스 메일 및 모닝콜</li>
+									<li>비즈니스 센터 무료 이용</li>
+									<li>일일 세탁(유료)</li>
+									<li>미니바(일부 객실 제외)</li>
+									<li>룸서비스(06:30~24:00)</li>
+								</ul>
+							</td>
+			                <td>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon03.png" ></td>
+			                <td>
+								<p class="title">편의시설</p>
+								<span class="title2">객 실</span>
+								<ul class="info_list">
+									<li>32” LCD TV(62개 채널)</li>
+									<li>개인금고</li>
+									<li>전기포트, 찻잔세트</li>
+									<li>손전등, 방연마스크</li>
+									<li>옷솔, 구두솔, 구둣주걱</li>
+									<li>110/220V 전압사용가능</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+								<span class="title2">욕 실</span>
+								<ul class="info_list">
+									<li>비데 및 욕조(일부 객실 제외)</li>
+									<li>욕실용품(AVEDA 4종, 칫솔·치약은 유료)</li>
+									<li>타월 3종 (핸드·세면·베스)</li>
+									<li>헤어드라이기</li>
+									<li>목욕가운, 슬리퍼</li>
+									<li>다리미와 다리미판(요청 시)</li>
+								</ul>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon04.png" ></td>
+			                <td>
+								<p class="title">이용안내</p>
+								<ul class="info_list">
+									<li>체크인 : 14:00</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+								<ul class="info_list">
+									<li>체크아웃 : 12:00</li>
+								</ul>
+			                </td>
+			            </tr>
+			    	</tbody>
+			   	</table>
 				</div>
-				<div id="tab-3" class="tab-content">
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				
+				<div id="tabs-3" class="tab-content">
+					<ul class="bxslider3">
+					  <li><img src="/Rentoutua/main_content/images/rooms/family_twin_img01.jpg" /></li>
+					  <li><img src="/Rentoutua/main_content/images/rooms/family_twin_img02.jpg" /></li>
+					  <li><img src="/Rentoutua/main_content/images/rooms/family_twin_img03.jpg" /></li>
+					  <li><img src="/Rentoutua/main_content/images/rooms/family_twin_img04.jpg" /></li>
+					</ul>
+					
+					<table class="table table-fixed">
+			        <tbody>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon01.png" ></td>
+			                <td>
+								<p class="title">특징</p>
+								<ul class="info_list">
+									<li>
+										<span>가 격 :</span>
+										 200, 000원
+									</li>
+									<li>
+										<span>면 적 :</span>
+										 24.52㎡
+									</li>
+									<li>
+										<span>위 치 :</span>
+										 2 층
+									</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+								<ul class="info_list">
+									<li>
+										<span>객실수 :</span>
+										 10실
+									</li>
+									<li>
+										<span>타 입 :</span>
+										 싱글
+									</li>
+								</ul>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon02.png" ></td>
+			                <td>
+								<p class="title">서비스</p>
+								<ul class="info_list">
+									<li>초고속 인터넷 및 WIFI(무료)</li>
+									<li>무료생수(1일 2병) 및 차(티백) 제공</li>
+									<li>Direct 국제전화, 보이스 메일 및 모닝콜</li>
+									<li>비즈니스 센터 무료 이용</li>
+									<li>일일 세탁(유료)</li>
+									<li>미니바(일부 객실 제외)</li>
+									<li>룸서비스(06:30~24:00)</li>
+								</ul>
+							</td>
+			                <td>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon03.png" ></td>
+			                <td>
+								<p class="title">편의시설</p>
+								<span class="title2">객 실</span>
+								<ul class="info_list">
+									<li>32” LCD TV(62개 채널)</li>
+									<li>개인금고</li>
+									<li>전기포트, 찻잔세트</li>
+									<li>손전등, 방연마스크</li>
+									<li>옷솔, 구두솔, 구둣주걱</li>
+									<li>110/220V 전압사용가능</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+			                	<span class="title2">욕 실</span>
+								<ul class="info_list">
+									<li>비데 및 욕조(일부 객실 제외)</li>
+									<li>욕실용품(AVEDA 4종, 칫솔·치약은 유료)</li>
+									<li>타월 3종 (핸드·세면·베스)</li>
+									<li>헤어드라이기</li>
+									<li>목욕가운, 슬리퍼</li>
+									<li>다리미와 다리미판(요청 시)</li>
+								</ul>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon04.png" ></td>
+			                <td>
+								<p class="title">이용안내</p>
+								<ul class="info_list">
+									<li>체크인 : 14:00</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+								<ul class="info_list">
+									<li>체크아웃 : 12:00</li>
+								</ul>
+			                </td>
+			            </tr>
+			    	</tbody>
+			   	</table>
 				</div>
-				<div id="tab-4" class="tab-content">
-					Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				
+				<div id="tabs-4" class="tab-content">
+					<ul class="bxslider4">
+					  <li><img src="/Rentoutua/main_content/images/rooms/family_triple_img01.jpg" /></li>
+					  <li><img src="/Rentoutua/main_content/images/rooms/family_triple_img02.jpg" /></li>
+					  <li><img src="/Rentoutua/main_content/images/rooms/family_triple_img03.jpg" /></li>
+					</ul>
+				<table class="table table-fixed">
+			        <tbody>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon01.png" ></td>
+			                <td>
+								<p class="title">특징</p>
+								<ul class="info_list">
+									<li>
+										<span>가 격 :</span>
+										 200, 000원
+									</li>
+									<li>
+										<span>면 적 :</span>
+										 24.52㎡
+									</li>
+									<li>
+										<span>위 치 :</span>
+										 2 층
+									</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+								<ul class="info_list">
+									<li>
+										<span>객실수 :</span>
+										 10실
+									</li>
+									<li>
+										<span>타 입 :</span>
+										 싱글
+									</li>
+								</ul>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon02.png" ></td>
+			                <td>
+								<p class="title">서비스</p>
+								<ul class="info_list">
+									<li>초고속 인터넷 및 WIFI(무료)</li>
+									<li>무료생수(1일 2병) 및 차(티백) 제공</li>
+									<li>Direct 국제전화, 보이스 메일 및 모닝콜</li>
+									<li>비즈니스 센터 무료 이용</li>
+									<li>일일 세탁(유료)</li>
+									<li>미니바(일부 객실 제외)</li>
+									<li>룸서비스(06:30~24:00)</li>
+								</ul>
+							</td>
+			                <td>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon03.png" ></td>
+			                <td>
+								<p class="title">편의시설</p>
+								<span class="title2">객 실</span>
+								<ul class="info_list">
+									<li>32” LCD TV(62개 채널)</li>
+									<li>개인금고</li>
+									<li>전기포트, 찻잔세트</li>
+									<li>손전등, 방연마스크</li>
+									<li>옷솔, 구두솔, 구둣주걱</li>
+									<li>110/220V 전압사용가능</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+			                	<span class="title2">욕 실</span>
+								<ul class="info_list">
+									<li>비데 및 욕조(일부 객실 제외)</li>
+									<li>욕실용품(AVEDA 4종, 칫솔·치약은 유료)</li>
+									<li>타월 3종 (핸드·세면·베스)</li>
+									<li>헤어드라이기</li>
+									<li>목욕가운, 슬리퍼</li>
+									<li>다리미와 다리미판(요청 시)</li>
+								</ul>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><img src="/Rentoutua/main_content/images/icon/room_detail_icon04.png" ></td>
+			                <td>
+								<p class="title">이용안내</p>
+								<ul class="info_list">
+									<li>체크인 : 14:00</li>
+								</ul>
+							</td>
+			                <td>
+			                	<p class="title">&nbsp;</p>
+								<ul class="info_list">
+									<li>체크아웃 : 12:00</li>
+								</ul>
+			                </td>
+			            </tr>
+			    	</tbody>
+			   	</table>
 				</div>
 			</div>
-<!-- 			container -->
 	  </div>
 
 </body>
