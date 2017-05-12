@@ -1,6 +1,7 @@
 package hotel.command;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class CusCommandNull implements Command{
 	private String next;
@@ -9,7 +10,7 @@ public class CusCommandNull implements Command{
 		next = _next;
 	}
 
-	public String execute( HttpServletRequest request ) throws CommandException{
+	public String execute( HttpServletRequest request, HttpServletResponse response ) throws CommandException{
 		return next;
 	}
 }

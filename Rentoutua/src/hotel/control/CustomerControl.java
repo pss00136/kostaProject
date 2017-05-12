@@ -8,9 +8,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+  
 import hotel.command.CusCommandInput;
 import hotel.command.CusCommandList;
+import hotel.command.CusCommandLoginCheck;
 import hotel.command.CusCommandNull;
 import hotel.command.Command;
 import hotel.command.CommandException;
@@ -31,16 +32,15 @@ public class CustomerControl extends HttpServlet {
 	}
 
 	private void initCommand(){
-		System.out.println("��Ʈ�� ����");
+		System.out.println("command connect");
 		commandMap = new HashMap();
 		//null?? db?��갔다?��
 		//customer control
 //		commandMap.put("main-page",	new CommandNull("main.jsp") );
-//		commandMap.put("list-page",	new CommandList("listMessage.jsp") );
+		commandMap.put("index-page", new CusCommandNull("index.jsp") );
+		commandMap.put("login-do", new CusCommandLoginCheck("index.jsp") );
 //		// ?��머�??�� 추�??���?		
 //		commandMap.put("input-form", new CommandNull("insertMessage.jsp") );
-		commandMap.put("index-page", new CusCommandNull("index.jsp") );
-		commandMap.put("login-do", new CusCommandList("index.jsp") );
 		commandMap.put("cusinsert-form", new CusCommandNull("SignUp.jsp"));
 		commandMap.put("cusinsert-do", new CusCommandInput("SignUpSave.jsp"));
 //		commandMap.put("delete-form", new CommandNull("deleteMessage.jsp"));
@@ -68,7 +68,8 @@ public class CustomerControl extends HttpServlet {
 
 		
 		Command cmd = null;
-
+		
+		
 		try{
 			//?��문자�? toLowerCase()
 			if( commandMap.containsKey( cmdKey.toLowerCase() ) ){
@@ -77,7 +78,7 @@ public class CustomerControl extends HttpServlet {
 				throw new CommandException("�??��?�� 명령?���? 존재?���? ?��?��");
 			}
 //			System.out.println(cmd);
-			nextPage = cmd.execute( request );
+			nextPage = cmd.execute( request, response );
 //			System.out.println(nextPage);
 
 		}catch( CommandException e ){
@@ -85,10 +86,11 @@ public class CustomerControl extends HttpServlet {
 			nextPage = error;
 			System.out.println("?���? : " + e.getMessage() );
 		}
-
+		
+		if(nextPage != null){
 		RequestDispatcher reqDp = getServletContext().getRequestDispatcher( jspDir + nextPage );
 		reqDp.forward( request, response );
-		
+		}
 	}
 
 }

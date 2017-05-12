@@ -1,6 +1,7 @@
 package hotel.command;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import hotel.command.CommandException;
 import hotel.model.Customer;
@@ -17,7 +18,7 @@ public class CusCommandInput implements Command{
 	CustomerRepository repo = new CustomerRepository();
 	
 	@Override
-	public String execute(HttpServletRequest request) throws CommandException {
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 			System.out.println("커맨드 접속");
 			Customer cus = new Customer();
 			cus.setCuEmail(request.getParameter("cuEmail"));

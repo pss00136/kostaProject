@@ -28,17 +28,49 @@ public class CustomerRepository {
 		return factory;
 	}
 	
-	public Customer selectCustomerById(String email, String pass) {
-		SqlSession sqlSess = getSelSessionFactiory().openSession();
-		try{
-			HashMap map = new HashMap();
-			map.put("cuEmail", email);
-			map.put("cuPass", pass);
-			return sqlSess.selectOne(namespace+".selectCustomer" , map);
-		}finally{
-			sqlSess.close();
-		}
-	}
+//	public List<Comment> selectComment(){
+//		SqlSession sqlSess = getSelSessionFactiory().openSession();
+//		try{
+//			return sqlSess.selectList(namespace+".selectComment");
+//		}finally{
+//			sqlSess.close();
+//		}
+//	}
+//	public Integer modifyComment(Comment c){
+//		SqlSession sqlSess = getSelSessionFactiory().openSession();
+//		try{
+//			String statment = namespace + ".modifyComment";
+//			int result = sqlSess.update(statment, c);
+//			if(result > 0){
+//				sqlSess.commit();
+//				//JDBC : auto-commit, Mybatis : ?��?��
+//			}else{
+//				sqlSess.rollback();
+//			}
+//		}finally{
+//			sqlSess.close();
+//		}
+//		return 0;
+//	}
+//	
+//	public Integer deleteComment(int commentNo){
+//		SqlSession sqlSess = getSelSessionFactiory().openSession();
+//		try{
+//			HashMap map = new HashMap();
+//			map.put("commentNo", commentNo);
+//			int result = sqlSess.delete(namespace+".deleteComment" , map);
+//			if(result > 0){
+//				sqlSess.commit();
+//				//JDBC : auto-commit, Mybatis : ?��?��
+//			}else{
+//				sqlSess.rollback();
+//			}
+//		}finally{
+//			sqlSess.close();
+//		}
+//		return 0;
+//	}
+	
 	
 	public Integer insertCustomer( Customer cus){
 		//JDBC : Connection, Mybatis : SqlSession
@@ -58,5 +90,17 @@ public class CustomerRepository {
 			sqlSess.close();
 		}
 		return 0;
+	}
+
+	public Customer selectCustomerById(String email, String pass) {
+		SqlSession sqlSess = getSelSessionFactiory().openSession();
+		try{
+			HashMap map = new HashMap();
+			map.put("cuEmail", email);
+			map.put("cuPass", pass);
+			return sqlSess.selectOne(namespace+".selectCustomer" , map);
+		}finally{
+			sqlSess.close();
+		}
 	}
 }

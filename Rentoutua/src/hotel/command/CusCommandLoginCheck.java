@@ -1,5 +1,7 @@
 package hotel.command;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -7,10 +9,10 @@ import javax.servlet.http.HttpSession;
 import hotel.model.Customer;
 import hotel.session.CustomerRepository;
 
-public class CusCommandList implements Command{
+public class CusCommandLoginCheck implements Command{
 	private String next;
 
-	public CusCommandList( String _next ){
+	public CusCommandLoginCheck( String _next ){
 		next = _next;
 	}
 	
@@ -39,10 +41,14 @@ public class CusCommandList implements Command{
 //				response.sendRedirect("LoginForm.jsp");
 			}		
 			
-			
+			try {
+		         response.getWriter().print(result);
+		      } catch (IOException e) {
+		         throw new CommandException();
+		      }
 			System.out.println(customer);
 		   
 		    
-		return next;
+		return null;
 	}
 }

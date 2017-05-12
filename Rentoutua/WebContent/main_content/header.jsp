@@ -1,26 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="hotel.model.*" %> 
-<%	
-	boolean flag = false;
-
-// 	if((String)request.getAttribute("name")==""){
-// 		flag = true;
-// 	}
-	Customer customer = (Customer)request.getAttribute("customer");
-	String name = null;
-	String type = null;
-	if( customer != null ){
-		flag = true;
-		name = customer.getCuKname();
-		type = customer.getCuType();
-	}else{
-		flag = false;
-	}
-	System.out.println("flag >> "+flag);
-	System.out.println("헤더 >> "+name);
-	System.out.println("헤더 >> "+type);
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,7 +70,8 @@
    
   <script>
   $(document).ready(function(){
-	    $(".dropdown_hotel").hover(            
+	$("logout_btn").hide();
+	  $(".dropdown_hotel").hover(            
 	        function() {
 	            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
 	            $(this).toggleClass('open');        
@@ -103,6 +84,32 @@
 	    $("#logout_btn").click(function(){
 	    	$("#refresh").attr("href","rentoutua.cus?cmd=index-page");
 	    });
+	    
+	    $("#sign_in").click(function(){
+// 	    	alert("버튼 클릭")
+	    	$.ajax({
+	    		url: 'rentoutua.cus?cmd=login-do',
+	    		type :'post',
+	    		data : { cuEmail : $('#inputEmail').val(),
+	    			cuPass : $('#inputPassword').val()
+	    		},
+	    		dataType :'text',
+	    		success : function(data){
+// 	    			alert("데이타");
+	    			if(data.trim() == 'YES'){
+	    				$('.dropdown').hide();
+	    				$('#logout_btn').show();
+// 	    				alert("로그인 성공");
+	    			}else if( data.trim() == 'NO'){
+	    				alert("로그인 실패");
+	    			}
+	    		},
+	    		error : function(err){
+	    			alert('에러발생 ' + err.toString())
+	    		}
+	    	})
+	    });
+	    	
 	});
   
   $( function() {
@@ -147,7 +154,7 @@
                   <div id="maintitle" class="col-sm-2 col-xs-12">
                      <div id="gtco-logo"><a href="rentoutua.cus?cmd=index-page">Rentoutua</a></div>
                   </div>
-                   <% if(flag == false){ %>
+                   <%// if(flag == false){ %>
                   <div class="dropdown">
                      <button id="login_btn" class="btn btn-default"type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</button>
                        <ul id="login-dp" class="dropdown-menu" role="menu">
@@ -155,18 +162,18 @@
                             <div class="row">
                                  <div class="col-md-12">
                                     Login via
-                                     <form action="rentoutua.cus?cmd=login-do" class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                     <form action="#" class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                           <div class="form-group">
                                               <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                              <input type="email" class="form-control" name="cuEmail" id="exampleInputEmail2" placeholder="Email address" required>
+                                              <input type="email" class="form-control" name="cuEmail" id="inputEmail" placeholder="Email address" required>
                                           </div>
                                           <div class="form-group">
                                               <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                              <input type="password" class="form-control" name="cuPass" id="exampleInputPassword2" placeholder="Password" required>
+                                              <input type="password" class="form-control" name="cuPass" id="inputPassword" placeholder="Password" required>
                                                          <div class="help-block text-right"><a href="">Forget the password ?</a></div>
                                           </div>
                                           <div class="form-group">
-                                              <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                              <input  type="button" id="sign_in" class="btn btn-primary btn-block" value="Sign in" />
                                           </div>
                                      </form>
                                  </div>
@@ -177,9 +184,9 @@
                         </li>
                      </ul>
                   </div>
-                   <%}else{ %>
+                   <%//}else{ %>
                     <a id="refresh" href="#"><button id="logout_btn" class="btn btn-default"type="button" >Logout</button></a>
-                   <%} %>
+                   <%//} %>
                   <div class="col-xs-10 text-right menu-1 main-nav">
                      <ul>
                      	<li><a href="/Rentoutua/main_content/branchInfo.jsp" class="external">Hotel Infomation</a></li>
@@ -197,9 +204,9 @@
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                         <li><a href="/Rentoutua/main_content/special_list.jsp" class="external">Special Offer</a></li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                        <%if(flag == true) {%>
+                        <%//if(flag == true) {%>
                         <li><a href="/Rentoutua/main_content/mypageMember.jsp" class="external">My page</a></li>
-                    	 <% }%>
+                    	 <% //}%>
                      </ul>
                   </div>
                </div>
