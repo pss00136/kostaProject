@@ -13,6 +13,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	VALUES(#{cuEmail},#{cuPass},#{cuBirthday},#{cuPhone},#{cuTel},#{cuKname},#{cuLastname},#{cuFirstname},'고객')
 </insert>
 <!-- # : PreparedStateMent형식, $ : Statement형식 -->
-
+<select id="selectCustomer" parameterType="hashmap"  resultType="customer">
+	SELECT *
+	FROM customer
+	<where>
+	cu_email = #{cuEmail} 
+	AND cu_pass = #{cuPass}
+	</where> 
+</select>
 
 </mapper>

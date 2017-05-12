@@ -1,5 +1,26 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="hotel.model.*" %> 
+<%	
+	boolean flag = false;
+
+// 	if((String)request.getAttribute("name")==""){
+// 		flag = true;
+// 	}
+	Customer customer = (Customer)request.getAttribute("customer");
+	String name = null;
+	String type = null;
+	if( customer != null ){
+		flag = true;
+		name = customer.getCuKname();
+		type = customer.getCuType();
+	}else{
+		flag = false;
+	}
+	System.out.println("flag >> "+flag);
+	System.out.println("헤더 >> "+name);
+	System.out.println("헤더 >> "+type);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +100,9 @@
 	            $(this).toggleClass('open');       
 	        }
 	    );
+	    $("#logout_btn").click(function(){
+	    	$("#refresh").attr("href","rentoutua.cus?cmd=index-page");
+	    });
 	});
   
   $( function() {
@@ -121,8 +145,9 @@
             <div class="gtco-container">
                <div class="row">
                   <div id="maintitle" class="col-sm-2 col-xs-12">
-                     <div id="gtco-logo"><a href="index.jsp">Rentoutua</a></div>
+                     <div id="gtco-logo"><a href="rentoutua.cus?cmd=index-page">Rentoutua</a></div>
                   </div>
+                   <% if(flag == false){ %>
                   <div class="dropdown">
                      <button id="login_btn" class="btn btn-default"type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</button>
                        <ul id="login-dp" class="dropdown-menu" role="menu">
@@ -130,14 +155,14 @@
                             <div class="row">
                                  <div class="col-md-12">
                                     Login via
-                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                     <form action="rentoutua.cus?cmd=login-do" class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                           <div class="form-group">
                                               <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                              <input type="email" class="form-control" name="cuEmail" id="exampleInputEmail2" placeholder="Email address" required>
                                           </div>
                                           <div class="form-group">
                                               <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                              <input type="password" class="form-control" name="cuPass" id="exampleInputPassword2" placeholder="Password" required>
                                                          <div class="help-block text-right"><a href="">Forget the password ?</a></div>
                                           </div>
                                           <div class="form-group">
@@ -146,12 +171,15 @@
                                      </form>
                                  </div>
                                  <div class="bottom text-center">
-                                    New here ? <a href="/Rentoutua/main_content/SignUp.jsp"><b>Join Us</b></a>
+                                    New here ? <a href="rentoutua.cus?cmd=cusinsert-form"><b>Join Us</b></a>
                                  </div>
                             </div>
                         </li>
                      </ul>
                   </div>
+                   <%}else{ %>
+                    <a id="refresh" href="#"><button id="logout_btn" class="btn btn-default"type="button" >Logout</button></a>
+                   <%} %>
                   <div class="col-xs-10 text-right menu-1 main-nav">
                      <ul>
                      	<li><a href="/Rentoutua/main_content/branchInfo.jsp" class="external">Hotel Infomation</a></li>
@@ -169,7 +197,9 @@
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                         <li><a href="/Rentoutua/main_content/special_list.jsp" class="external">Special Offer</a></li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        <%if(flag == true) {%>
                         <li><a href="/Rentoutua/main_content/mypageMember.jsp" class="external">My page</a></li>
+                    	 <% }%>
                      </ul>
                   </div>
                </div>

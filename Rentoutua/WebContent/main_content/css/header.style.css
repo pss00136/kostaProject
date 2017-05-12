@@ -27,6 +27,13 @@
 	background-image: url("/Rentoutua/main_content/images/back3.jpg");
 }
 
+/* logout */
+#logout_btn{
+	position: relative;
+	left:70%;
+	
+}
+
 /* bootstrap login popup */
 #login_btn{
 	position: relative;

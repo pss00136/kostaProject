@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import hotel.command.CusCommandInput;
+import hotel.command.CusCommandList;
+import hotel.command.CusCommandNull;
 import hotel.command.Command;
 import hotel.command.CommandException;
 
@@ -29,14 +31,17 @@ public class CustomerControl extends HttpServlet {
 	}
 
 	private void initCommand(){
-		System.out.println("ÄÁÆ®·Ñ Á¢¼Ó");
+		System.out.println("ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		commandMap = new HashMap();
-		//null?? db?•ˆê°”ë‹¤?˜´
+		//null?? db?ï¿½ï¿½ê°”ë‹¤?ï¿½ï¿½
 		//customer control
 //		commandMap.put("main-page",	new CommandNull("main.jsp") );
 //		commandMap.put("list-page",	new CommandList("listMessage.jsp") );
-//		// ?‚˜ë¨¸ì??„ ì¶”ê??•˜ê¸?		
+//		// ?ï¿½ï¿½ë¨¸ï¿½??ï¿½ï¿½ ì¶”ï¿½??ï¿½ï¿½ï¿½?		
 //		commandMap.put("input-form", new CommandNull("insertMessage.jsp") );
+		commandMap.put("index-page", new CusCommandNull("index.jsp") );
+		commandMap.put("login-do", new CusCommandList("index.jsp") );
+		commandMap.put("cusinsert-form", new CusCommandNull("SignUp.jsp"));
 		commandMap.put("cusinsert-do", new CusCommandInput("SignUpSave.jsp"));
 //		commandMap.put("delete-form", new CommandNull("deleteMessage.jsp"));
 //		commandMap.put("delete-do", new CommandDelete("deleteConfirm.jsp"));
@@ -65,11 +70,11 @@ public class CustomerControl extends HttpServlet {
 		Command cmd = null;
 
 		try{
-			//?†Œë¬¸ìë§? toLowerCase()
+			//?ï¿½ï¿½ë¬¸ìï¿½? toLowerCase()
 			if( commandMap.containsKey( cmdKey.toLowerCase() ) ){
 				cmd = (Command)commandMap.get( cmdKey.toLowerCase());
 			}else{
-				throw new CommandException("ì§?? •?•  ëª…ë ¹?–´ê°? ì¡´ì¬?•˜ì§? ?•Š?Œ");
+				throw new CommandException("ï¿½??ï¿½ï¿½?ï¿½ï¿½ ëª…ë ¹?ï¿½ï¿½ï¿½? ì¡´ì¬?ï¿½ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½");
 			}
 //			System.out.println(cmd);
 			nextPage = cmd.execute( request );
@@ -78,7 +83,7 @@ public class CustomerControl extends HttpServlet {
 		}catch( CommandException e ){
 			request.setAttribute("javax.servlet.jsp.jspException", e );
 			nextPage = error;
-			System.out.println("?˜¤ë¥? : " + e.getMessage() );
+			System.out.println("?ï¿½ï¿½ï¿½? : " + e.getMessage() );
 		}
 
 		RequestDispatcher reqDp = getServletContext().getRequestDispatcher( jspDir + nextPage );

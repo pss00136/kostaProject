@@ -11,6 +11,7 @@ public class Customer implements Serializable{
 	String cuKname;
 	String cuLastname;
 	String cuFirstname;
+	String cuType;
 	
 	public String getCuEmail() {
 		return cuEmail;
@@ -60,5 +61,10 @@ public class Customer implements Serializable{
 	public void setCuFirstname(String cuFirstname) {
 		this.cuFirstname = cuFirstname;
 	}
-	
+	public String getCuType() {
+		return cuType;
+	}
+	public void setCuType(String cuType) {
+		this.cuType = cuType;
+	}
 }
