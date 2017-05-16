@@ -1,6 +1,25 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="hotel.model.*" %> 
+<%
+	String user = null;
+	String type = null;
+	//# 1."id"로 저장된 세션값을 얻어온다.
+	//# 2. 값이 null이라면 LoginForm.jsp로 페이지 이동
+	//# 3. null이 아니라면 String 형변환하여 변수에 지정
+	Customer sess = (Customer)session.getAttribute("id");
+	
+	
+//null이 아닌경우  default값은 
+	if(sess != null){
+		user = sess.getCuKname();
+		type = sess.getCuType();
+	}else{
+		System.out.println("로그인을 다시 해주세요");
+		
+	}
+	System.out.println("헤더의 유저 >> "+user);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,12 +85,32 @@
    #hotel_menu{
    	left:45%;
    }
+   .error-comment{
+   	color: #FF5126;
+   }
+   #userName{
+   	position : relative;
+   	left : 70%;
+   }
    </style>
    
   <script>
   $(document).ready(function(){
-	$("logout_btn").hide();
-	  $(".dropdown_hotel").hover(            
+
+
+		if( "<%= user %>" == "null" ) {
+			$('.dropdown').show();
+			$('#logout_btn').hide();
+			$("li #mypage_menu").hide();
+			$("#userName").hide();
+		}else{
+			$('.dropdown').hide();
+			$('#logout_btn').show();
+			$("li #mypage_menu").show();
+			$("#userName").show();
+		}
+
+	  $(".dropdown_hotel").hover(    
 	        function() {
 	            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
 	            $(this).toggleClass('open');        
@@ -82,7 +121,28 @@
 	        }
 	    );
 	    $("#logout_btn").click(function(){
-	    	$("#refresh").attr("href","rentoutua.cus?cmd=index-page");
+	    	alert("logout 버튼 누름");
+	    	$.ajax({
+	    		url: 'rentoutua.cus?cmd=logout-do',
+	    		type :'post',
+	    		dataType :'text',
+	    		success : function(data){
+// 	    			alert("데이타");
+	    			if(data.trim() == 'NO'){
+	    				$('.dropdown').show();
+	    				$('#logout_btn').hide();
+	    				$("li #mypage_menu").hide();
+	    				$("#userName").hide();
+	    				alert("로그아웃");
+	    			}else if( data.trim() == 'Yes'){
+	    				alert("로그인 실패");
+						$(".error-comment").show();
+	    			}
+	    		},
+	    		error : function(err){
+	    			alert('에러발생 ' + err.toString())
+	    		}
+	    	})
 	    });
 	    
 	    $("#sign_in").click(function(){
@@ -93,15 +153,23 @@
 	    		data : { cuEmail : $('#inputEmail').val(),
 	    			cuPass : $('#inputPassword').val()
 	    		},
+	    		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 	    		dataType :'text',
 	    		success : function(data){
-// 	    			alert("데이타");
-	    			if(data.trim() == 'YES'){
+	    			if( true ){
 	    				$('.dropdown').hide();
 	    				$('#logout_btn').show();
-// 	    				alert("로그인 성공");
-	    			}else if( data.trim() == 'NO'){
+	    				$("li #mypage_menu").show();
+	    				var obj = {};
+	    		    	obj = eval("(" + data + ")");
+	    		    	$("#userName").show();
+	    				$("#userName").text(obj.saveName+obj.saveType+"님 환영합니다.");
+	    				alert(obj.saveType);
+	    				alert("로그인 성공");
+// 	    				console.log(data);
+	    			}else {
 	    				alert("로그인 실패");
+						$(".error-comment").show();
 	    			}
 	    		},
 	    		error : function(err){
@@ -154,7 +222,6 @@
                   <div id="maintitle" class="col-sm-2 col-xs-12">
                      <div id="gtco-logo"><a href="rentoutua.cus?cmd=index-page">Rentoutua</a></div>
                   </div>
-                   <%// if(flag == false){ %>
                   <div class="dropdown">
                      <button id="login_btn" class="btn btn-default"type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</button>
                        <ul id="login-dp" class="dropdown-menu" role="menu">
@@ -170,6 +237,7 @@
                                           <div class="form-group">
                                               <label class="sr-only" for="exampleInputPassword2">Password</label>
                                               <input type="password" class="form-control" name="cuPass" id="inputPassword" placeholder="Password" required>
+                                                          <div class="error-comment text-center">아이디 또는 패스워드를 잘 못 입력하셨습니다.</div>
                                                          <div class="help-block text-right"><a href="">Forget the password ?</a></div>
                                           </div>
                                           <div class="form-group">
@@ -184,9 +252,10 @@
                         </li>
                      </ul>
                   </div>
-                   <%//}else{ %>
-                    <a id="refresh" href="#"><button id="logout_btn" class="btn btn-default"type="button" >Logout</button></a>
-                   <%//} %>
+                   <div id = "after-login">
+                    <button id="logout_btn" class="btn btn-default" type="button" >Logout</button>
+                     <span id="userName">chchchc</span>
+                     </div>
                   <div class="col-xs-10 text-right menu-1 main-nav">
                      <ul>
                      	<li><a href="/Rentoutua/main_content/branchInfo.jsp" class="external">Hotel Infomation</a></li>
@@ -204,9 +273,7 @@
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                         <li><a href="/Rentoutua/main_content/special_list.jsp" class="external">Special Offer</a></li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                        <%//if(flag == true) {%>
-                        <li><a href="/Rentoutua/main_content/mypageMember.jsp" class="external">My page</a></li>
-                    	 <% //}%>
+                        <li ><a href="rentoutua.cus?cmd=cusmypage-form" id="mypage_menu"  class="external">My page</a></li>
                      </ul>
                   </div>
                </div>
@@ -216,10 +283,10 @@
              <span class="glyphicon glyphicon-book"></span>
              </a>
              <nav id="sidebar-wrapper">
-                <form name="frm" action="reservationSelect.jsp">
+                <form name="frm" action="rentoutua.res?cmd=resSelect-form">
                  <ul class="sidebar-nav">
                      <li class="sidebar-brand">
-                         <a href="#top"  onclick="$('#menu-close').click();" >Reservation</a>
+                         <a href="rentoutua.cus?cmd=index-page"  onclick="$('#menu-close').click();" >Reservation</a>
                      </li>
                      <li id="cal_li">
                      <label id="cal_label1" for="from">Check-in</label><br/>
