@@ -13,6 +13,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <!-- class name alias -->
  <typeAliases>
 	<typeAlias type="hotel.model.Customer" alias='customer'/>
+	<typeAlias type="hotel.model.Eventinfo" alias='eventinfo'/>
  </typeAliases>
  <environments default="development">
 	<environment id="development">
@@ -28,5 +29,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  <mappers>
 	<!-- 여러개의 매퍼를 등록 -->
 	<mapper resource="hotel/mapper/CustomerMapper.xml"/>
+	<mapper resource="hotel/mapper/EventinfoMapper.xml"/>
  </mappers>
 </configuration>

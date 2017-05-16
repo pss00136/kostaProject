@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="hotel.mapper.EventinfoMapper">
+
+<insert id="insertEventinfo" parameterType="eventinfo">
+	INSERT INTO eventinfo(ev_num, ev_title, ev_contents, image_path, thumb_path, image_name, thumb_name, ev_date)
+	VALUES(SEQUENCE_EVENTINFO_NUM.nextval , #{evTitle}, #{evContents}, #{imagePath}, #{thumbPath}, #{imageName}, #{thumbName} , sysdate)
+</insert>
+<select id="selectEventinfo" resultType="eventinfo">
+	SELECT * FROM eventinfo ORDER BY ev_num desc
+</select>
+<select id="selectEventinfoById" resultType="eventinfo" parameterType="hashmap">
+	SELECT * FROM eventinfo WHERE ev_num = #{evNum}
+</select>
+</mapper>
