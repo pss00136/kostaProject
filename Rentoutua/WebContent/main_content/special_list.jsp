@@ -1,3 +1,5 @@
+<%@page import="java.util.*"%>
+<%@page import="hotel.model.Eventinfo"%>
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,8 +23,22 @@
 	margin: 0 auto;
 	width: 65%;
 }
-
+.ev_date{
+	color:#999999;
+}
 </style>
+
+
+<% 
+	List<Eventinfo> eventList = (List)request.getAttribute("eventList");
+	int listSize = eventList.size();
+	int row = (listSize/4) +1;
+	if(listSize%4==0){
+		row = listSize/4;
+	}
+	int j=0;
+
+%>
 
 </head>
 <body>
@@ -31,136 +47,42 @@
 
 <!-- content -->
  <div class="container" id="tourpackages-carousel">
-      
+	 <div class="row">
+	 		<div class="sub_content">
+			<h3>Promotion</h3>
+			<p class="sub_txt control-label">레또뚜아 호텔만의 다양한 프로모션 상품을 경험해 보시기 바랍니다.</p>
+			</div>
+	 </div>
+	<%for(int i=0; i<row; i++){ %>
       <div class="row">
-        
+        <% for(int h=0; h<=3; h++){ %>
+        <% Eventinfo event = eventList.get(j); %>
         <div class="col-xs-18 col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
+            <a href="rentoutua.event?cmd=eventinfo-view&evNum=<%=event.getEvNum()%>"><img src="<%= event.getThumbPath() %>" alt=""></a>
               <div class="caption">
-                <h4>Thumbnail label</h4>
-             
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+                <a href="rentoutua.event?cmd=eventinfo-view&evNum=<%=event.getEvNum()%>"><h3><%= event.getEvTitle() %></h3></a>
+                <p class="ev_date"><%= event.getEvDate() %></p>
+<!--                 <a href="#" class="btn btn-info btn-xs" role="button">수정</a> <a href="#" class="btn btn-default btn-xs btn-danger" role="button">삭제</a></p> -->
             </div>
           </div>
         </div>
+		<%
+		j++; 
+			if(j==listSize){break;}
+		}%>
 
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- End row -->
-      <div class="row">
-        
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- End row -->
-       <div class="row">
-        
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
-              <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- End row -->     
+	  </div><!--End row -->
+      <% }//end of for %>
       
-    </div><!-- End container -->
+      	<!--글쓰기 폼 이동 버튼 -->
+   		<div class="row">
+   			<div class="col-xs-18 col-sm-6 col-md-3">
+   				<a href="rentoutua.event?cmd=eventinfo-form" class="btn btn-default" role="button">글쓰기</a>
+   			 </div>
+   		</div>     
+      
+ </div><!-- End container -->
     
     <!-- 푸터 연결 -->
 	<jsp:include page="footer2.jsp"></jsp:include>
