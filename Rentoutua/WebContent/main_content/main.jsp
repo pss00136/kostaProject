@@ -57,27 +57,20 @@
 <div id="fullpage">
 				<div class="section " id="section0">
 					<div class="intro">
-						<h1>Fixed elements</h1>
-						<p>Create your own headers and footers</p>
-						<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-						
+						<h1>Welcome</h1>						
 					</div>
 				</div>
 				<div class="section" id="section1">
-				    <h1>How to do it</h1>
-					<p>
-						You will need to place your header and footer outside the plugin's wrapper. 
-						This way it won't move on scrolling. Take a look at the source code of this page.
-					</p>
+				    <h1>Accommodation</h1>
 				</div>
 				<div class="section" id="section2">
 					<div class="intro">
-						<h1>Enjoy it</h1>
+						<h1>Banquet</h1>
 					</div>
 				</div>
 				<div class="section" id="section3">
 					<div class="intro">
-						<h1>Enjoy it</h1>
+						<h1>Dining</h1>
 					</div>
 				</div>
 			</div>
