@@ -29,4 +29,13 @@
   	<url-pattern>/event</url-pattern>
   	<url-pattern>*.event</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ReservationControl</servlet-name>
+    <servlet-class>hotel.control.ReservationControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReservationControl</servlet-name>
+    <url-pattern>/res</url-pattern>
+    <url-pattern>*.res</url-pattern>
+  </servlet-mapping>
 </web-app>

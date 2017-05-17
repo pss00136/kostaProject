@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="hotel.mapper.ReservationMapper">
+
+
+
+
+<!-- # : PreparedStateMent형식, $ : Statement형식 -->
+<!-- 예약되어 있지 않은 객실 찾아오기 -->
+<select id="selectAcc"  parameterType = "hashmap" resultType="acc">
+		SELECT *
+		FROM ACCOMMODATION 
+		WHERE acc_num  NOT IN (SELECT acc_num FROM reservation) AND br_num = #{brNum} AND acc_people = #{accPeople}
+</select>
+<select id="selectBrName"  parameterType = "String" resultType="String">
+		SELECT br_name
+		FROM branch 
+		WHERE  br_num = #{brNum}
+</select>
+<insert id="insertRes" parameterType="reservation">
+	INSERT INTO reservation(re_num,re_date,to_char(re_checkin,'mm/dd/yyyy'),to_char(re_checkout,'mm/dd/yyyy'),re_adult,re_child,re_state,re_meal,acc_num,cu_email,br_num)
+	VALUES(sequence_reservation_num.nextval,sysdate,#{reCheckin},#{reCheckout},#{reAdult},#{reChild},'예약중',#{reMeal},#{accNum},#{cuEmail},#{brNum})
+</insert>
+<select id="selectRes"  resultType="int">
+		SELECT re_num
+		FROM reservation
+		WHERE  re_num = sequence_reservation_num.currval
+</select>
+<insert id="insertPay" parameterType="payment">
+	INSERT INTO customer(re_num,pay_cardnum,pay_type,pay_total,pay_date)
+	VALUES(#{reNum},#{PayCardnum},#{PayType},#{payTotal},#{payDate})
+</insert>
+</mapper>

@@ -14,6 +14,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  <typeAliases>
 	<typeAlias type="hotel.model.Customer" alias='customer'/>
 	<typeAlias type="hotel.model.Eventinfo" alias='eventinfo'/>
+	<typeAlias type="hotel.model.Accommodation" alias='acc'/>
+	<typeAlias type="hotel.model.Reservation" alias='reservation'/>
+	<typeAlias type="hotel.model.Payment" alias='payment'/>
  </typeAliases>
  <environments default="development">
 	<environment id="development">
@@ -30,5 +33,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- 여러개의 매퍼를 등록 -->
 	<mapper resource="hotel/mapper/CustomerMapper.xml"/>
 	<mapper resource="hotel/mapper/EventinfoMapper.xml"/>
+	<mapper resource="hotel/mapper/ReservationMapper.xml"/>
  </mappers>
 </configuration>
