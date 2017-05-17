@@ -9,7 +9,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import hotel.model.Accommodation;
 import hotel.model.Customer;
+import hotel.model.Payment;
+import hotel.model.Reservation;
 
 public class CustomerRepository {
 	
@@ -103,4 +106,17 @@ public class CustomerRepository {
 			sqlSess.close();
 		}
 	}
+
+	public Customer selectCustomerByInfo(String email) {
+		SqlSession sqlSess = getSelSessionFactiory().openSession();
+		try{
+			
+			return sqlSess.selectOne(namespace+".selectInfo" , email);
+		}finally{
+			sqlSess.close();
+		}
+	}
+
+
+	
 }
