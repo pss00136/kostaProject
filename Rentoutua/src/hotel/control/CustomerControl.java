@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import hotel.command.CusCommandInput;
 import hotel.command.CusCommandList;
 import hotel.command.CusCommandLoginCheck;
+import hotel.command.CusCommandLogout;
 import hotel.command.CusCommandNull;
 import hotel.command.Command;
 import hotel.command.CommandException;
@@ -39,13 +40,14 @@ public class CustomerControl extends HttpServlet {
 //		commandMap.put("main-page",	new CommandNull("main.jsp") );
 		commandMap.put("index-page", new CusCommandNull("index.jsp") );
 		commandMap.put("login-do", new CusCommandLoginCheck("index.jsp") );
+		commandMap.put("logout-do", new CusCommandLogout("index.jsp") );
 //		// ?��머�??�� 추�??���?		
 //		commandMap.put("input-form", new CommandNull("insertMessage.jsp") );
 		commandMap.put("cusinsert-form", new CusCommandNull("SignUp.jsp"));
 		commandMap.put("cusinsert-do", new CusCommandInput("SignUpSave.jsp"));
+		commandMap.put("cusmypage-form", new CusCommandNull("mypageMember.jsp"));
 //		commandMap.put("delete-form", new CommandNull("deleteMessage.jsp"));
 //		commandMap.put("delete-do", new CommandDelete("deleteConfirm.jsp"));
-		
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
