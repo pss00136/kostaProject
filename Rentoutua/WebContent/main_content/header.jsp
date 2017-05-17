@@ -108,6 +108,7 @@
 			$('#logout_btn').show();
 			$("li #mypage_menu").show();
 			$("#userName").show();
+			$("#userName").text("<%=sess.getCuKname()%>");
 		}
 
 	  $(".dropdown_hotel").hover(    
@@ -254,7 +255,7 @@
                   </div>
                    <div id = "after-login">
                     <button id="logout_btn" class="btn btn-default" type="button" >Logout</button>
-                     <span id="userName">chchchc</span>
+                     <span id="userName">aa</span>
                      </div>
                   <div class="col-xs-10 text-right menu-1 main-nav">
                      <ul>
@@ -283,7 +284,7 @@
              <span class="glyphicon glyphicon-book"></span>
              </a>
              <nav id="sidebar-wrapper">
-                <form name="frm" action="rentoutua.res?cmd=resSelect-form">
+                <form  action="rentoutua.res?cmd=ressel-form" method="post" >
                  <ul class="sidebar-nav">
                      <li class="sidebar-brand">
                          <a href="rentoutua.cus?cmd=index-page"  onclick="$('#menu-close').click();" >Reservation</a>
@@ -294,21 +295,30 @@
                      <label id="cal_label2" for="to">Check-out</label><br/>
                      <input class="cal_form" type="text" id="to" name="to"><br/><br/>
                      </li>
+                     <li class="branch_li">
+                        <label>지점선택</label>&nbsp;&nbsp;&nbsp;
+                     <select class="rev_branch" name="rev_branch">
+                        <option value = "0">지점선택</option>
+                        <option value = "10">서울점</option>
+                        <option value = "20">제주점</option>
+                        <option value = "30">경주점</option>
+                     </select><br/>
+                     </li>
                      <li class="rev_li">
                         <label>Adult</label>&nbsp;&nbsp;&nbsp;
-                     <select class="rev_people">
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
+                     <select class="rev_people" name="rev_people">
+                        <option value = "0">0</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
                      </select><br/>
                      </li>
                      <li class="rev_li">
                          <label>Children</label>&nbsp;&nbsp;&nbsp;
-                     <select>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
+                     <select class="rev_child" name="rev_child">
+                        <option value = "0">0</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
                      </select><br/><br/>
                      </li>
                      <li id="rev_submit">           
